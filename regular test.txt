@@ -1,0 +1,49 @@
+*** Settings ***
+Library           Selenium2Library
+Library           ClosedriverLibrary
+
+*** Test Cases ***
+logintest
+    login
+    logout
+    [Teardown]    CleanProcess
+
+publishedWords
+    login
+    Click Element     //span[contains(text(),"写文章")]
+    Wait Until Page Contains Element    //span[contains(text(),"发布视频")]    15s
+    Wait Until Page Contains Element    //span[contains(text(),"发表文章")]    15s
+    Click Element    //span[contains(text(),"发表文章")]
+    sleep    3
+    Clear Element Text    /html/body/div/div[2]/div[2]/div/form/div[1]/div/div/input
+    Input Text    自动化测试1
+    sleep    2
+    Close All Browsers
+    [Teardown]    CleanProcess
+
+*** Keywords ***
+CleanProcess
+    Close Process    chromedriver
+    [Teardown]
+
+login
+    Open Browser     https://www.kg.com/    browser=chrome
+     sleep     2
+    Click Element    //a[contains(text(),"登录")]
+    sleep     2
+    Clear Element Text    //input[@id='loginInput']
+    Input Text     //input[@id='loginInput']    18113185587
+    Clear Element Text     //input[@id='bodyMain']
+    Input Password    //input[@id='bodyMain']    880914mm_
+    Click Button    //*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button
+    sleep     2
+
+logout
+    Wait Until Element Is Visible    //a[@class="omit1 headerUserName"]    5s
+    Click Element    //a[@class="omit1 headerUserName"]
+    Wait Until Element Is Visible    //ul[@class="navAccount"]    5s
+    Click Element    //ul[@class="navAccount"]/li[7]
+    Wait Until Element Is Visible    //a[contains(text(),"登录")]    5s
+    Page Should Contain Element    //a[contains(text(),"登录")]
+    Page Should Contain Element    //a[contains(text(),"/注册")]
+    Close All Browsers
