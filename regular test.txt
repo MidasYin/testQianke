@@ -1,44 +1,53 @@
 *** Settings ***
 Library           Selenium2Library
 Library           ClosedriverLibrary
+Library           SSHLibrary
 
 *** Test Cases ***
 logintest
-    login
-    logout
+    loginqk
+    logoutqk
     [Teardown]    CleanProcess
 
 publishedWords
-    login
-    Click Element     //span[contains(text(),"写文章")]
+    loginqk
+    Click Element    //span[contains(text(),"写文章")]
     Wait Until Page Contains Element    //span[contains(text(),"发布视频")]    15s
     Wait Until Page Contains Element    //span[contains(text(),"发表文章")]    15s
     Click Element    //span[contains(text(),"发表文章")]
     sleep    3
     Clear Element Text    /html/body/div/div[2]/div[2]/div/form/div[1]/div/div/input
-    Input Text    自动化测试1
-    sleep    2
-    Close All Browsers
+    Comment    Input Text    自动化测试1
+    Comment    sleep    2
+    Comment    Close All Browsers
     [Teardown]    CleanProcess
+
+register
+    Open Connection    172.16.0.16
+    login    test_xkj    xkj123456
+    sleep    1
+    ${log}    Execute Command    tail -200 /data/tomcat/logs/catalina.out
+    sleep    2
+    log    ${log}
 
 *** Keywords ***
 CleanProcess
     Close Process    chromedriver
     [Teardown]
 
-login
-    Open Browser     https://www.kg.com/    browser=chrome
-     sleep     2
+loginqk
+    Open Browser    https://www.kg.com/    browser=chrome
+    sleep    2
     Click Element    //a[contains(text(),"登录")]
-    sleep     2
+    sleep    2
     Clear Element Text    //input[@id='loginInput']
-    Input Text     //input[@id='loginInput']    18113185587
-    Clear Element Text     //input[@id='bodyMain']
+    Input Text    //input[@id='loginInput']    18113185587
+    Clear Element Text    //input[@id='bodyMain']
     Input Password    //input[@id='bodyMain']    880914mm_
     Click Button    //*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button
-    sleep     2
+    sleep    2
 
-logout
+logoutqk
     Wait Until Element Is Visible    //a[@class="omit1 headerUserName"]    5s
     Click Element    //a[@class="omit1 headerUserName"]
     Wait Until Element Is Visible    //ul[@class="navAccount"]    5s
