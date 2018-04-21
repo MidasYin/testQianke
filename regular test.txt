@@ -11,13 +11,16 @@ logintest
 
 publishedWords
     loginqk
+    Maximize Browser Window
+    sleep    1
     Click Element    //span[contains(text(),"写文章")]
+    Select Window    url=https://www.kg.com/account/details.html#/column
     Wait Until Page Contains Element    //span[contains(text(),"发布视频")]    15s
     Wait Until Page Contains Element    //span[contains(text(),"发表文章")]    15s
     Click Element    //span[contains(text(),"发表文章")]
     sleep    3
-    Clear Element Text    /html/body/div/div[2]/div[2]/div/form/div[1]/div/div/input
-    Comment    Input Text    自动化测试1
+    Click Element    'css=div.el-form-item__content>div>input.el-input__inner'
+    Input Text    'css=div.el-form-item__content>div>input.el-input__inner'    自动化测试1
     Comment    sleep    2
     Comment    Close All Browsers
     [Teardown]    CleanProcess
@@ -43,16 +46,19 @@ loginqk
     Clear Element Text    //input[@id='loginInput']
     Input Text    //input[@id='loginInput']    18113185587
     Clear Element Text    //input[@id='bodyMain']
-    Input Password    //input[@id='bodyMain']    880914mm_
+    Input Password    //input[@id='bodyMain']    123456
     Click Button    //*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button
     sleep    2
 
 logoutqk
+    Maximize Browser Window
     Wait Until Element Is Visible    //a[@class="omit1 headerUserName"]    5s
     Click Element    //a[@class="omit1 headerUserName"]
     Wait Until Element Is Visible    //ul[@class="navAccount"]    5s
     Click Element    //ul[@class="navAccount"]/li[7]
-    Wait Until Element Is Visible    //a[contains(text(),"登录")]    5s
+    Wait Until Element Is Visible    //a[contains(text(),"登录")]    15s
+    Wait Until Element Is Visible    //a[contains(text(),"/注册")]    15s
     Page Should Contain Element    //a[contains(text(),"登录")]
     Page Should Contain Element    //a[contains(text(),"/注册")]
+    sleep    4
     Close All Browsers
