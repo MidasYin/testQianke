@@ -19,8 +19,11 @@ publishedWords
     Wait Until Page Contains Element    //span[contains(text(),"发表文章")]    15s
     Click Element    //span[contains(text(),"发表文章")]
     sleep    3
-    Click Element    'css=div.el-form-item__content>div>input.el-input__inner'
-    Input Text    'css=div.el-form-item__content>div>input.el-input__inner'    自动化测试1
+    Select Window    url=https://www.kg.com/publish/list.html
+    Comment    Click Element    dom=document.querySelector('div.el-form-item__content>div>input.el-input__inner')
+    Input Text    xpath=/html/body/div/div[2]/div[2]/div/form/div[1]/div/div[1]/input    自动化测试
+    Comment    Execute Javascript    window.document.querySelector('div.el-form-item__content>div>input.el-input__inner').value='wocca'
+    sleep    20
     Comment    sleep    2
     Comment    Close All Browsers
     [Teardown]    CleanProcess
