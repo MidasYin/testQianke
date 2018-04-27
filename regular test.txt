@@ -22,10 +22,30 @@ publishedWords
     Select Window    url=https://www.kg.com/publish/list.html
     Comment    Click Element    dom=document.querySelector('div.el-form-item__content>div>input.el-input__inner')
     Input Text    xpath=/html/body/div/div[2]/div[2]/div/form/div[1]/div/div[1]/input    自动化测试
-    Comment    Execute Javascript    window.document.querySelector('div.el-form-item__content>div>input.el-input__inner').value='wocca'
-    sleep    20
-    Comment    sleep    2
-    Comment    Close All Browsers
+    Wait Until Element Is Visible    //div[@id='toolbar']/../div[2]/div[1]    20s
+    Input Text    //div[@id='toolbar']/../div[2]/div[1]    天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；
+    Execute Javascript    document.documentElement.scrollTop=600
+    Comment    Focus    /html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input
+    Wait Until Element Is Visible    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input    20s
+    Input Text    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input    12
+    Comment    Focus	\	    /html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input
+    Input Text    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input    34
+    Comment    Focus    /html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input
+    Input Text    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input    56
+    sleep    0.5
+    Execute Javascript    document.documentElement.scrollTop=800
+    Click Element    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[2]/div/div[2]/div[1]/img    #保存图片
+    Wait Until Element Is Visible    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span    20s    #等待类别选择
+    Click Element    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span
+    Wait Until Element Is Visible    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span    20s    #等待文章选择不打赏
+    Click Element    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span
+    sleep    1
+    Click Element    //button[@class='el-button el-button--primary']/span[contains(text(),"发表文章")]
+    Comment    Execute Javascript    document.documentElement.scrollTop=10000
+    Wait Until Element Is Visible    xpath=//span[contains(text(),"我知道了")]    20s    #弹窗后点击确定/html/body/div[2]/div/div[3]/button/span
+    Click Element    xpath=//span[contains(text(),"我知道了")]
+    sleep    5
+    Close All Browsers
     [Teardown]    CleanProcess
 
 register
@@ -47,7 +67,7 @@ loginqk
     Click Element    //a[contains(text(),"登录")]
     sleep    2
     Clear Element Text    //input[@id='loginInput']
-    Input Text    //input[@id='loginInput']    18113185587
+    Input Text    //input[@id='loginInput']    18109072521
     Clear Element Text    //input[@id='bodyMain']
     Input Password    //input[@id='bodyMain']    123456
     Click Button    //*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button
