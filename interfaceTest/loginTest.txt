@@ -1,0 +1,78 @@
+*** Settings ***
+Library           RequestsLibrary
+Library           Base64Library
+
+*** Variables ***
+${mobile}         18113185587    # 用户手机号
+${passwd}         123456    # 测试服务器
+${pwd}            880914mm_    # 正式服务器密码
+${id}             1    # 分页数
+
+*** Test Cases ***
+testLogin
+    Create Session    api    https://www.kg.com
+    ${dict}    Create Dictionary    userMobile=${mobile}    userPassword=${passwd}
+    ${base64}    Base 64 Encode    ${dict}
+    log    ${base64}
+    ${dict}    Create Dictionary    data=${base64}
+    ${response}    Post Request    api    /userkg/checkLogin    params=${dict}
+    Should Be Equal As Strings    ${response.status_code}    200
+    ${txt}    Set Variable    ${response.json()}
+    log    ${txt}
+    Should Be Equal    ${txt['message']}    成功
+
+Getelement
+    [Documentation]    登录返回的useid_token类型，后续用于加密
+    ${dict}    checkyuansu    ${mobile}    ${passwd}
+    log    ${dict}
+    ${token}    Set Variable    ${dict['token']}
+    ${userid}    Set Variable    ${dict['userid']}
+    Set Suite Variable    ${token}
+    Set Suite Variable    ${userid}
+
+selectByUserflow
+    ${header}    Create Dictionary    token=${token}
+    Create Session    api    https://www.kg.com    ${header}
+    ${dict}    Create Dictionary    userId=${userid}    currentPage=${id}
+    ${base64}    Base 64 Encode    ${dict}
+    log    ${base64}
+    ${sign}    Convert To Md5    ${base64}    ${token}
+    ${dict}    Create Dictionary    data=${base64}    sign=${sign}
+    log    ${dict}
+    ${response}    Post Request    api    /accountFlow/selectByUserflow    params=${dict}
+    Should Be Equal As Strings    ${response.status_code}    200
+    ${txt}    Set Variable    ${response.json()}
+    log    ${txt}
+    Should Be Equal    ${txt['message']}    成功
+
+*** Keywords ***
+checkToken
+    [Arguments]    ${mobile}    ${passwd}
+    Create Session    api    https://www.kg.com
+    ${dict}    Create Dictionary    userMobile=${mobile}    userPassword=${passwd}
+    ${base64}    Base 64 Encode    ${dict}
+    log    ${base64}
+    ${dict}    Create Dictionary    data=${base64}
+    ${response}    Post Request    api    /userkg/checkLogin    params=${dict}
+    Should Be Equal As Strings    ${response.status_code}    200
+    log    Login Success
+    ${txt}    Set Variable    ${response.json()}
+    ${token}    Set Variable    ${txt['responseBody']['data']['token']}
+    log    ${token}
+    [Return]    ${token}    # 返回usrid_token
+
+checkyuansu
+    [Arguments]    ${mobile}    ${passwd}
+    Create Session    api    https://www.kg.com
+    ${dict}    Create Dictionary    userMobile=${mobile}    userPassword=${passwd}
+    ${base64}    Base 64 Encode    ${dict}
+    log    ${base64}
+    ${dict}    Create Dictionary    data=${base64}
+    ${response}    Post Request    api    /userkg/checkLogin    params=${dict}
+    Should Be Equal As Strings    ${response.status_code}    200
+    ${txt}    Set Variable    ${response.json()}
+    ${token}    Set Variable    ${txt['responseBody']['data']['token']}
+    ${userid}    Set Variable    ${txt['responseBody']['data']['userId']}
+    ${dict}    Create Dictionary    token=${token}    userid=${userid}
+    log    ${dict}
+    [Return]    ${dict}    # 返回userid与token_userid的字典
