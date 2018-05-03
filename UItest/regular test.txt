@@ -61,6 +61,7 @@ testSqlcon
     Connect To Database Using Custom Params    pymysql    host='172.16.0.17',port=3306,user='lzy',passwd='123456',db='kgweb'
     ${usrid}    Query    select * from kg_user WHERE user_mobile = '18109072538'
     log    ${usrid[0][0]}
+    Disconnect From Database
 
 *** Keywords ***
 CleanProcess
