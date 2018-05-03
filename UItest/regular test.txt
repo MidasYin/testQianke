@@ -2,6 +2,7 @@
 Library           Selenium2Library
 Library           ClosedriverLibrary
 Library           SSHLibrary
+Library           DatabaseLibrary
 
 *** Test Cases ***
 logintest
@@ -28,7 +29,7 @@ publishedWords
     Comment    Focus    /html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input
     Wait Until Element Is Visible    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input    20s
     Input Text    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input    12
-    Comment    Focus	\	    /html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input
+    Comment    Focus    \    /html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input
     Input Text    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input    34
     Comment    Focus    /html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input
     Input Text    xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input    56
@@ -55,6 +56,11 @@ register
     ${log}    Execute Command    tail -200 /data/tomcat/logs/catalina.out
     sleep    2
     log    ${log}
+
+testSqlcon
+    Connect To Database Using Custom Params    pymysql    host='172.16.0.17',port=3306,user='lzy',passwd='123456',db='kgweb'
+    ${usrid}    Query    select * from kg_user WHERE user_mobile = '18109072538'
+    log    ${usrid[0][0]}
 
 *** Keywords ***
 CleanProcess
