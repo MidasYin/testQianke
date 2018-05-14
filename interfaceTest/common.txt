@@ -1,0 +1,27 @@
+*** Settings ***
+Library           Base64Library
+Library           SSHLibrary
+Library           RequestsLibrary
+
+*** Variables ***
+${mobile}         18113185587    # 手机号码
+${passwd}         123456    # 测试服务器
+${pwd}            880914mm_    # 正式服务器密码
+${id}             1    # 分页数
+
+*** Keywords ***
+checkyuansu
+    [Arguments]    ${mobile}    ${passwd}
+    Create Session    api    https://www.kg.com
+    ${dict}    Create Dictionary    userMobile=${mobile}    userPassword=${pwd}
+    ${base64}    Base 64 Encode    ${dict}
+    log    ${base64}
+    ${dict}    Create Dictionary    data=${base64}
+    ${response}    Post Request    api    /userkg/checkLogin    params=${dict}
+    Should Be Equal As Strings    ${response.status_code}    200
+    ${txt}    Set Variable    ${response.json()}
+    ${token}    Set Variable    ${txt['responseBody']['data']['token']}
+    ${userid}    Set Variable    ${txt['responseBody']['data']['userId']}
+    ${dict}    Create Dictionary    token=${token}    userid=${userid}
+    log    ${dict}
+    [Return]    ${dict}    # 返回userid与token_userid的字典
