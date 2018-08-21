@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180816 21:18:46.054" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\Apptest\AppDemo" id="s1" name="AppDemo">
+<suite source="D:\testQianke\Apptest\AppDemo\登录.txt" id="s1-s1" name="登录">
+<test id="s1-s1-t1" name="打开App">
+<kw name="http://127.0.0.1:4723/wd/hub">
+<arguments>
+<arg>platformName=Android</arg>
+<arg>platformVersion=6.0.1</arg>
+<arg>deviceName=F3D7N15A22005398</arg>
+<arg>app=D:\\kg_test_v1.2.0.10.apk</arg>
+<arg>noReset=true</arg>
+<arg>appPackage=com.kgtech.kg</arg>
+<arg>automationName=Uiautomator2</arg>
+<arg>newCommandTimeout=0</arg>
+<arg>noSign=True</arg>
+<arg>appActivity=com.kgtech.kg.activity.MainActivity</arg>
+</arguments>
+<msg timestamp="20180816 21:18:46.223" level="FAIL">No keyword with name 'http://127.0.0.1:4723/wd/hub' found.</msg>
+<status status="FAIL" endtime="20180816 21:18:46.223" starttime="20180816 21:18:46.223"></status>
+</kw>
+<status status="FAIL" endtime="20180816 21:18:46.224" critical="yes" starttime="20180816 21:18:46.219">No keyword with name 'http://127.0.0.1:4723/wd/hub' found.</status>
+</test>
+<status status="FAIL" endtime="20180816 21:18:46.224" starttime="20180816 21:18:46.093"></status>
+</suite>
+<status status="FAIL" endtime="20180816 21:18:46.226" starttime="20180816 21:18:46.069"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="AppDemo" pass="0">AppDemo</stat>
+<stat fail="1" id="s1-s1" name="登录" pass="0">AppDemo.登录</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

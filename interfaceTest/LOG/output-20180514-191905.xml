@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180514 19:19:05.901" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\interfaceTest" id="s1" name="interfaceTest">
+<suite source="D:\testQianke\interfaceTest\loginTest.txt" id="s1-s1" name="loginTest">
+<test id="s1-s1-t1" name="Getelement">
+<kw name="checkyuansu" library="common">
+<arguments>
+<arg>${mobile}</arg>
+<arg>${passwd}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api</arg>
+<arg>https://www.kg.com</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.130" level="INFO">Creating Session using : alias=api, url=https://www.kg.com, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20180514 19:19:06.130" level="DEBUG">Creating session: api</msg>
+<msg timestamp="20180514 19:19:06.131" level="DEBUG">Argument types are:
+&lt;type 'bool'&gt;</msg>
+<status status="PASS" endtime="20180514 19:19:06.132" starttime="20180514 19:19:06.130"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>userMobile=${mobile}</arg>
+<arg>userPassword=${passwd}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.133" level="INFO">${dict} = {u'userMobile': u'18113185587', u'userPassword': u'123456'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.133" starttime="20180514 19:19:06.133"></status>
+</kw>
+<kw name="Base 64 Encode" library="Base64Library">
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<assign>
+<var>${base64}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.134" level="INFO">${base64} = eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ==</msg>
+<status status="PASS" endtime="20180514 19:19:06.134" starttime="20180514 19:19:06.134"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${base64}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.135" level="INFO">eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ==</msg>
+<status status="PASS" endtime="20180514 19:19:06.136" starttime="20180514 19:19:06.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>data=${base64}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.136" level="INFO">${dict} = {u'data': 'eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ=='}</msg>
+<status status="PASS" endtime="20180514 19:19:06.137" starttime="20180514 19:19:06.136"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>api</arg>
+<arg>/userkg/checkLogin</arg>
+<arg>params=${dict}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.140" level="DEBUG">Starting new HTTPS connection (1): www.kg.com</msg>
+<msg timestamp="20180514 19:19:06.539" level="DEBUG">https://www.kg.com:443 "POST /userkg/checkLogin?data=eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ%3D%3D HTTP/1.1" 200 None</msg>
+<msg timestamp="20180514 19:19:06.540" level="DEBUG">post response: {"responseReq":"","responseTime":"1526296745969","message":"成功","code":"10000","accountStr":"","responseBody":{"errorCode":10000,"errorMsg":null,"data":{"applyRole":null,"inmagelink":"https://kgcom.oss-cn-shenzhen.aliyuncs.com/","userId":"438017635100270592","userName":"Terry的专栏","userEmail":null,"userMobile":"18113185587","mobileArea":"86","userPassword":null,"userRole":2,"userLevel":null,"auditStatus":0,"bindStatus":null,"lockStatus":null,"accountFrom":null,"thirdPartyId":null,"createDate":null,"applyColumnTime":null,"registerIp":null,"emailAuthed":null,"mobileAuthed":null,"bindWeibo":null,"bindWeiXin":null,"userOrder":null,"hotUser":null,"token":"438017635100270592_271dbb7291c042f4bcb399a1f6a586d1","tokenModel":{"userId":438017635100270592,"token":"271dbb7291c042f4bcb399a1f6a586d1"},"state":false,"mobIle":null,"articlesum":6,"realnameAuthed":1,"tradepasswordSet":1,"depositStatus":0,"userStatus":null,"wbName":null,"wxName":null,"lockDate":null,"lockTime":null,"lockUnit":null,"response":null,"refuseReason":null,"certRefuseReason":null,"depositAddress":null,"atskMobile":"181****5587","realName":null,"idcardNo":null,"idcardFront":null,"certificateStatus":"1","depositAmount":null,"remainingAmount":null,"loginBonusStatus":1,"inviteCode":null,"inviteStatus":null,"bonusStatus":null,"bonusFreezeReason":null,"avatar":"17638/435787019852062720.jpg","headImgurl":null,"nickName":null,"openId":null,"newUser":null,"identityTag":"个人专栏","realAuthedTag":0,"vipTag":0},"ok":true}}</msg>
+<msg timestamp="20180514 19:19:06.540" level="INFO">Post Request using : alias=api, uri=/userkg/checkLogin, data=&lt;empty&gt;, headers=None, files=None, allow_redirects=True </msg>
+<msg timestamp="20180514 19:19:06.540" level="INFO">D:\Python27\lib\site-packages\urllib3\util\ssl_.py:339: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  SNIMissingWarning
+D:\Python27\lib\site-packages\urllib3\util\ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning
+D:\Python27\lib\site-packages\urllib3\connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20180514 19:19:06.540" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180514 19:19:06.541" starttime="20180514 19:19:06.137"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.541" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180514 19:19:06.542" starttime="20180514 19:19:06.541"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${response.json()}</arg>
+</arguments>
+<assign>
+<var>${txt}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.543" level="INFO">${txt} = {u'code': u'10000', u'responseBody': {u'errorCode': 10000, u'errorMsg': None, u'data': {u'bindStatus': None, u'depositAmount': None, u'inviteCode': None, u'bindWeibo': None, u'certRefuseReason': None,...</msg>
+<status status="PASS" endtime="20180514 19:19:06.543" starttime="20180514 19:19:06.542"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${txt['responseBody']['data']['token']}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.544" level="INFO">${token} = 438017635100270592_271dbb7291c042f4bcb399a1f6a586d1</msg>
+<status status="PASS" endtime="20180514 19:19:06.544" starttime="20180514 19:19:06.543"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${txt['responseBody']['data']['userId']}</arg>
+</arguments>
+<assign>
+<var>${userid}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.545" level="INFO">${userid} = 438017635100270592</msg>
+<status status="PASS" endtime="20180514 19:19:06.545" starttime="20180514 19:19:06.544"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>token=${token}</arg>
+<arg>userid=${userid}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.546" level="INFO">${dict} = {u'token': u'438017635100270592_271dbb7291c042f4bcb399a1f6a586d1', u'userid': u'438017635100270592'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.546" starttime="20180514 19:19:06.545"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.546" level="INFO">{u'token': u'438017635100270592_271dbb7291c042f4bcb399a1f6a586d1', u'userid': u'438017635100270592'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.547" starttime="20180514 19:19:06.546"></status>
+</kw>
+<msg timestamp="20180514 19:19:06.547" level="INFO">${dict} = {u'token': u'438017635100270592_271dbb7291c042f4bcb399a1f6a586d1', u'userid': u'438017635100270592'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.547" starttime="20180514 19:19:06.128"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.548" level="INFO">{u'token': u'438017635100270592_271dbb7291c042f4bcb399a1f6a586d1', u'userid': u'438017635100270592'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.548" starttime="20180514 19:19:06.547"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${dict['token']}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.549" level="INFO">${token} = 438017635100270592_271dbb7291c042f4bcb399a1f6a586d1</msg>
+<status status="PASS" endtime="20180514 19:19:06.549" starttime="20180514 19:19:06.548"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${dict['userid']}</arg>
+</arguments>
+<assign>
+<var>${userid}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.550" level="INFO">${userid} = 438017635100270592</msg>
+<status status="PASS" endtime="20180514 19:19:06.550" starttime="20180514 19:19:06.549"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${token}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.551" level="INFO">${token} = 438017635100270592_271dbb7291c042f4bcb399a1f6a586d1</msg>
+<status status="PASS" endtime="20180514 19:19:06.551" starttime="20180514 19:19:06.550"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${userid}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.552" level="INFO">${userid} = 438017635100270592</msg>
+<status status="PASS" endtime="20180514 19:19:06.552" starttime="20180514 19:19:06.551"></status>
+</kw>
+<doc>登录返回的useid_token类型，后续用于加密</doc>
+<status status="PASS" endtime="20180514 19:19:06.553" critical="yes" starttime="20180514 19:19:06.127"></status>
+</test>
+<test id="s1-s1-t2" name="selectByUserflow">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>token=${token}</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.555" level="INFO">${header} = {u'token': u'438017635100270592_271dbb7291c042f4bcb399a1f6a586d1'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.555" starttime="20180514 19:19:06.554"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api</arg>
+<arg>https://www.kg.com</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.557" level="INFO">Creating Session using : alias=api, url=https://www.kg.com, headers={u'token': u'438017635100270592_271dbb7291c042f4bcb399a1f6a586d1'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20180514 19:19:06.557" level="DEBUG">Creating session: api</msg>
+<msg timestamp="20180514 19:19:06.558" level="DEBUG">Argument types are:
+&lt;type 'bool'&gt;</msg>
+<status status="PASS" endtime="20180514 19:19:06.558" starttime="20180514 19:19:06.556"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>userId=${userid}</arg>
+<arg>currentPage=${id}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.559" level="INFO">${dict} = {u'userId': u'438017635100270592', u'currentPage': u'1'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.559" starttime="20180514 19:19:06.558"></status>
+</kw>
+<kw name="Base 64 Encode" library="Base64Library">
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<assign>
+<var>${base64}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.560" level="INFO">${base64} = eyJ1c2VySWQiOiAiNDM4MDE3NjM1MTAwMjcwNTkyIiwgImN1cnJlbnRQYWdlIjogIjEifQ==</msg>
+<status status="PASS" endtime="20180514 19:19:06.560" starttime="20180514 19:19:06.559"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${base64}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.560" level="INFO">eyJ1c2VySWQiOiAiNDM4MDE3NjM1MTAwMjcwNTkyIiwgImN1cnJlbnRQYWdlIjogIjEifQ==</msg>
+<status status="PASS" endtime="20180514 19:19:06.561" starttime="20180514 19:19:06.560"></status>
+</kw>
+<kw name="Convert To Md5" library="Base64Library">
+<arguments>
+<arg>${base64}</arg>
+<arg>${token}</arg>
+</arguments>
+<assign>
+<var>${sign}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.561" level="INFO">['eyJ1c2VySWQiOiAiNDM4MDE3NjM1MTAwMjcwNTkyIiwgImN1cnJlbnRQYWdlIjogIjEifQ==', u'438017635100270592_271dbb7291c042f4bcb399a1f6a586d1']</msg>
+<msg timestamp="20180514 19:19:06.562" level="INFO">${sign} = 0b15b34dff8d2375a83a0b4eea89cd28</msg>
+<status status="PASS" endtime="20180514 19:19:06.562" starttime="20180514 19:19:06.561"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>data=${base64}</arg>
+<arg>sign=${sign}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.563" level="INFO">${dict} = {u'data': 'eyJ1c2VySWQiOiAiNDM4MDE3NjM1MTAwMjcwNTkyIiwgImN1cnJlbnRQYWdlIjogIjEifQ==', u'sign': '0b15b34dff8d2375a83a0b4eea89cd28'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.563" starttime="20180514 19:19:06.562"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.563" level="INFO">{u'data': 'eyJ1c2VySWQiOiAiNDM4MDE3NjM1MTAwMjcwNTkyIiwgImN1cnJlbnRQYWdlIjogIjEifQ==', u'sign': '0b15b34dff8d2375a83a0b4eea89cd28'}</msg>
+<status status="PASS" endtime="20180514 19:19:06.564" starttime="20180514 19:19:06.563"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>api</arg>
+<arg>/accountFlow/selectByUserflow</arg>
+<arg>params=${dict}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.565" level="DEBUG">Starting new HTTPS connection (1): www.kg.com</msg>
+<msg timestamp="20180514 19:19:06.583" level="DEBUG">https://www.kg.com:443 "POST /accountFlow/selectByUserflow?data=eyJ1c2VySWQiOiAiNDM4MDE3NjM1MTAwMjcwNTkyIiwgImN1cnJlbnRQYWdlIjogIjEifQ%3D%3D&amp;sign=0b15b34dff8d2375a83a0b4eea89cd28 HTTP/1.1" 200 None</msg>
+<msg timestamp="20180514 19:19:06.584" level="DEBUG">post response: {"responseReq":"","responseTime":"1526296746013","message":"成功","code":"10000","accountStr":"","responseBody":{"currentPage":1,"pageSize":20,"totalNumber":46,"totalPage":3,"totalPrice":null,"data":[{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/10 00:00","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 23:06","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:50","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.20000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.20000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:36","flowDetail":"我收到平台发文奖励0.2TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"打赏-收入","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.70000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.70000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:32","flowDetail":"gg滚滚滚打赏了我的文章&lt;&lt;测试更改后的发布文章&gt;&gt;","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.20000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.20000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:32","flowDetail":"我收到平台发文奖励0.2TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:28","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"发文平台额外奖励(TV)","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.40000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.40000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:25","flowDetail":"测试更改后的发布文章获得平台额外钛值奖励0.4","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":1.20000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":1.20000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:24","flowDetail":"我收到平台发文奖励1.2TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.40000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.40000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:22","flowDetail":"我收到平台发文奖励0.4TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:20","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":5.00000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":5.00000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:17","flowDetail":"我收到平台发文奖励5TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 21:10","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 20:56","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 20:48","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.40000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.40000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 20:42","flowDetail":"我收到平台发文奖励0.4TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 20:28","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.10000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.10000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 20:10","flowDetail":"我收到平台发文奖励0.1TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.30000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.30000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 19:22","flowDetail":"我收到平台发文奖励0.3TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null},{"balance":null,"typename":"获取发文奖励","accountFlowId":null,"relationFlowId":null,"userId":null,"userPhone":null,"userEmail":null,"amount":0.40000000,"businessTypeId":null,"txId":null,"txAddress":null,"accountAmount":0.40000000,"freezeAmount":0E-8,"poundageAmount":null,"accountDate":null,"articleId":null,"bonusTotalPerson":null,"flowStatus":null,"freezeAmountString":"0E-8","flowDate":"2018/05/09 19:14","flowDetail":"我收到平台发文奖励0.4TV","remark":null,"actionTimes":null,"actionMinTimes":null,"userMobile":null,"withdrawFlowId":null,"todayIncome":null,"reduce":null,"beforeIncome":null,"incomes":null}]}}</msg>
+<msg timestamp="20180514 19:19:06.585" level="INFO">Post Request using : alias=api, uri=/accountFlow/selectByUserflow, data=&lt;empty&gt;, headers=None, files=None, allow_redirects=True </msg>
+<msg timestamp="20180514 19:19:06.585" level="INFO">D:\Python27\lib\site-packages\urllib3\util\ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning
+D:\Python27\lib\site-packages\urllib3\connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20180514 19:19:06.585" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180514 19:19:06.585" starttime="20180514 19:19:06.564"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.586" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180514 19:19:06.586" starttime="20180514 19:19:06.586"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${response.json()}</arg>
+</arguments>
+<assign>
+<var>${txt}</var>
+</assign>
+<msg timestamp="20180514 19:19:06.588" level="INFO">${txt} = {u'code': u'10000', u'responseBody': {u'totalPage': 3, u'totalPrice': None, u'pageSize': 20, u'totalNumber': 46, u'currentPage': 1, u'data': [{u'reduce': None, u'actionTimes': None, u'actionMinTimes':...</msg>
+<status status="PASS" endtime="20180514 19:19:06.588" starttime="20180514 19:19:06.586"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${txt}</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.589" level="INFO">{u'code': u'10000', u'responseBody': {u'totalPage': 3, u'totalPrice': None, u'pageSize': 20, u'totalNumber': 46, u'currentPage': 1, u'data': [{u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/10 00:00'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 23:06'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 21:50'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.2, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.2, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.2TV', u'balance': None, u'flowDate': u'2018/05/09 21:36'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.7, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u6253\u8d4f-\u6536\u5165', u'amount': 0.7, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'gg\u6eda\u6eda\u6eda\u6253\u8d4f\u4e86\u6211\u7684\u6587\u7ae0&lt;&lt;\u6d4b\u8bd5\u66f4\u6539\u540e\u7684\u53d1\u5e03\u6587\u7ae0&gt;&gt;', u'balance': None, u'flowDate': u'2018/05/09 21:32'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.2, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.2, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.2TV', u'balance': None, u'flowDate': u'2018/05/09 21:32'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 21:28'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.4, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u53d1\u6587\u5e73\u53f0\u989d\u5916\u5956\u52b1(TV)', u'amount': 0.4, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6d4b\u8bd5\u66f4\u6539\u540e\u7684\u53d1\u5e03\u6587\u7ae0\u83b7\u5f97\u5e73\u53f0\u989d\u5916\u949b\u503c\u5956\u52b10.4', u'balance': None, u'flowDate': u'2018/05/09 21:25'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 1.2, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 1.2, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b11.2TV', u'balance': None, u'flowDate': u'2018/05/09 21:24'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.4, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.4, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.4TV', u'balance': None, u'flowDate': u'2018/05/09 21:22'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 21:20'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 5.0, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 5.0, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b15TV', u'balance': None, u'flowDate': u'2018/05/09 21:17'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 21:10'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 20:56'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 20:48'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.4, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.4, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.4TV', u'balance': None, u'flowDate': u'2018/05/09 20:42'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 20:28'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.1, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.1, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.1TV', u'balance': None, u'flowDate': u'2018/05/09 20:10'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.3, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.3, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.3TV', u'balance': None, u'flowDate': u'2018/05/09 19:22'}, {u'reduce': None, u'actionTimes': None, u'actionMinTimes': None, u'userId': None, u'flowStatus': None, u'todayIncome': None, u'incomes': None, u'freezeAmount': 0.0, u'userMobile': None, u'poundageAmount': None, u'userEmail': None, u'businessTypeId': None, u'withdrawFlowId': None, u'freezeAmountString': u'0E-8', u'txAddress': None, u'txId': None, u'userPhone': None, u'articleId': None, u'accountFlowId': None, u'remark': None, u'accountAmount': 0.4, u'beforeIncome': None, u'accountDate': None, u'typename': u'\u83b7\u53d6\u53d1\u6587\u5956\u52b1', u'amount': 0.4, u'relationFlowId': None, u'bonusTotalPerson': None, u'flowDetail': u'\u6211\u6536\u5230\u5e73\u53f0\u53d1\u6587\u5956\u52b10.4TV', u'balance': None, u'flowDate': u'2018/05/09 19:14'}]}, u'responseTime': u'1526296746013', u'accountStr': u'', u'message': u'\u6210\u529f', u'responseReq': u''}</msg>
+<status status="PASS" endtime="20180514 19:19:06.590" starttime="20180514 19:19:06.588"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${txt['message']}</arg>
+<arg>成功</arg>
+</arguments>
+<msg timestamp="20180514 19:19:06.590" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180514 19:19:06.591" starttime="20180514 19:19:06.590"></status>
+</kw>
+<status status="PASS" endtime="20180514 19:19:06.591" critical="yes" starttime="20180514 19:19:06.553"></status>
+</test>
+<status status="PASS" endtime="20180514 19:19:06.591" starttime="20180514 19:19:05.939"></status>
+</suite>
+<status status="PASS" endtime="20180514 19:19:06.593" starttime="20180514 19:19:05.918"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="interfaceTest" pass="2">interfaceTest</stat>
+<stat fail="0" id="s1-s1" name="loginTest" pass="2">interfaceTest.loginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

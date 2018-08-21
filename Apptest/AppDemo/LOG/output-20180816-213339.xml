@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180816 21:33:39.317" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\Apptest\AppDemo" id="s1" name="AppDemo">
+<suite source="D:\testQianke\Apptest\AppDemo\登录.txt" id="s1-s1" name="登录">
+<test id="s1-s1-t1" name="打开App">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=6.0.1</arg>
+<arg>deviceName=F3D7N15A22005398</arg>
+<arg>app=D:\\kg_test_v1.2.0.10.apk</arg>
+<arg>noReset=true</arg>
+<arg>appPackage=com.kgtech.kg</arg>
+<arg>automationName=Uiautomator2</arg>
+<arg>newCommandTimeout=0</arg>
+<arg>noSign=True</arg>
+<arg>appActivity=.SplashActivity</arg>
+</arguments>
+<msg timestamp="20180816 21:33:39.482" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"appium:appActivity": ".SplashActivity", "appium:noReset": "true", "appium:noSign": "True", "appium:automationName": "Uiautomator2", "appium:newCommandTimeout": "0", "appium:app": "D:\\kg_test_v1.2.0.10.apk", "appium:deviceName": "F3D7N15A22005398", "appium:platformVersion": "6.0.1", "appium:appPackage": "com.kgtech.kg", "platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "F3D7N15A22005398", "automationName": "Uiautomator2", "noReset": "true", "appActivity": ".SplashActivity", "noSign": "True", "newCommandTimeout": "0", "platformVersion": "6.0.1", "appPackage": "com.kgtech.kg", "platformName": "Android", "app": "D:\\kg_test_v1.2.0.10.apk"}}</msg>
+<msg timestamp="20180816 21:34:05.350" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180816 21:34:05.352" level="DEBUG">Opened application with session id c7937479-4afb-4b92-aa3c-9ae4794f6a98</msg>
+<status status="PASS" endtime="20180816 21:34:05.353" starttime="20180816 21:33:39.479"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180816 21:34:10.356" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180816 21:34:10.357" starttime="20180816 21:34:05.354"></status>
+</kw>
+<status status="PASS" endtime="20180816 21:34:10.359" critical="yes" starttime="20180816 21:33:39.478"></status>
+</test>
+<status status="PASS" endtime="20180816 21:34:10.361" starttime="20180816 21:33:39.355"></status>
+</suite>
+<status status="PASS" endtime="20180816 21:34:10.367" starttime="20180816 21:33:39.333"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="AppDemo" pass="1">AppDemo</stat>
+<stat fail="0" id="s1-s1" name="登录" pass="1">AppDemo.登录</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

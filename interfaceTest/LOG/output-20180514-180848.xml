@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180514 18:08:48.983" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\UItest" id="s1" name="UItest">
+<suite source="D:\testQianke\UItest\regular test.txt" id="s1-s1" name="Regular Test">
+<test id="s1-s1-t1" name="logintest">
+<kw name="loginqk">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.kg.com/</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20180514 18:08:49.223" level="INFO">Opening browser 'chrome' to base url 'https://www.kg.com/'.</msg>
+<msg timestamp="20180514 18:08:52.261" level="DEBUG">POST http://127.0.0.1:61273/session {"capabilities": {"alwaysMatch": {"browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20180514 18:08:53.950" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:08:53.951" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/timeouts/async_script {"sessionId": "2638796e6dff7f349205b464d2aa4377", "ms": 5000.0}</msg>
+<msg timestamp="20180514 18:08:53.953" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:08:53.954" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/timeouts/implicit_wait {"sessionId": "2638796e6dff7f349205b464d2aa4377", "ms": 0.0}</msg>
+<msg timestamp="20180514 18:08:53.956" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:08:53.957" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/url {"url": "https://www.kg.com/", "sessionId": "2638796e6dff7f349205b464d2aa4377"}</msg>
+<msg timestamp="20180514 18:08:56.887" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:08:56.888" level="DEBUG">Opened browser with session id 2638796e6dff7f349205b464d2aa4377.</msg>
+<status status="PASS" endtime="20180514 18:08:56.888" starttime="20180514 18:08:49.222"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20180514 18:08:56.889" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/window/current/maximize {"windowHandle": "current", "sessionId": "2638796e6dff7f349205b464d2aa4377"}</msg>
+<msg timestamp="20180514 18:08:58.065" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:08:58.065" starttime="20180514 18:08:56.889"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 18:09:00.066" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:00.066" starttime="20180514 18:08:58.065"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(text(),"登录")]</arg>
+</arguments>
+<msg timestamp="20180514 18:09:00.068" level="INFO">Clicking element '//a[contains(text(),"登录")]'.</msg>
+<msg timestamp="20180514 18:09:00.068" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//a[contains(text(),\"\u767b\u5f55\")]"}</msg>
+<msg timestamp="20180514 18:09:00.107" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:00.108" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-1/click {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-1"}</msg>
+<msg timestamp="20180514 18:09:00.210" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:00.210" starttime="20180514 18:09:00.067"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 18:09:02.211" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:02.211" starttime="20180514 18:09:00.211"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='loginInput']</arg>
+</arguments>
+<msg timestamp="20180514 18:09:02.213" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//input[@id='loginInput']"}</msg>
+<msg timestamp="20180514 18:09:02.236" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.237" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-4/clear {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-4"}</msg>
+<msg timestamp="20180514 18:09:02.264" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:02.265" starttime="20180514 18:09:02.212"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='loginInput']</arg>
+<arg>18109072521</arg>
+</arguments>
+<msg timestamp="20180514 18:09:02.266" level="INFO">Typing text '18109072521' into text field '//input[@id='loginInput']'.</msg>
+<msg timestamp="20180514 18:09:02.267" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//input[@id='loginInput']"}</msg>
+<msg timestamp="20180514 18:09:02.307" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.307" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-4/clear {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-4"}</msg>
+<msg timestamp="20180514 18:09:02.316" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.317" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-4/value {"text": "18109072521", "sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-4", "value": ["1", "8", "1", "0", "9", "0", "7", "2", "5", "2", "1"]}</msg>
+<msg timestamp="20180514 18:09:02.420" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:02.420" starttime="20180514 18:09:02.265"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='bodyMain']</arg>
+</arguments>
+<msg timestamp="20180514 18:09:02.421" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//input[@id='bodyMain']"}</msg>
+<msg timestamp="20180514 18:09:02.436" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.436" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-5/clear {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-5"}</msg>
+<msg timestamp="20180514 18:09:02.480" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:02.480" starttime="20180514 18:09:02.421"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='bodyMain']</arg>
+<arg>123456</arg>
+</arguments>
+<msg timestamp="20180514 18:09:02.481" level="INFO">Typing password into text field '//input[@id='bodyMain']'.</msg>
+<msg timestamp="20180514 18:09:02.481" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//input[@id='bodyMain']"}</msg>
+<msg timestamp="20180514 18:09:02.490" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.491" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-5/clear {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-5"}</msg>
+<msg timestamp="20180514 18:09:02.500" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.500" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-5/value {"text": "123456", "sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-5", "value": ["1", "2", "3", "4", "5", "6"]}</msg>
+<msg timestamp="20180514 18:09:02.571" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:02.571" starttime="20180514 18:09:02.480"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button</arg>
+</arguments>
+<msg timestamp="20180514 18:09:02.572" level="INFO">Clicking button '//*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button'.</msg>
+<msg timestamp="20180514 18:09:02.573" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//*[@id=\"app\"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button"}</msg>
+<msg timestamp="20180514 18:09:02.595" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.596" level="DEBUG">GET http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-6/name {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-6"}</msg>
+<msg timestamp="20180514 18:09:02.601" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.601" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//*[@id=\"app\"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button"}</msg>
+<msg timestamp="20180514 18:09:02.613" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.613" level="DEBUG">GET http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-6/name {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-6"}</msg>
+<msg timestamp="20180514 18:09:02.618" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:02.618" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.05431823742664488-6/click {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.05431823742664488-6"}</msg>
+<msg timestamp="20180514 18:09:02.673" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:02.674" starttime="20180514 18:09:02.572"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 18:09:04.675" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:04.675" starttime="20180514 18:09:02.675"></status>
+</kw>
+<status status="PASS" endtime="20180514 18:09:04.675" starttime="20180514 18:08:49.221"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20180514 18:09:04.676" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/window/current/maximize {"windowHandle": "current", "sessionId": "2638796e6dff7f349205b464d2aa4377"}</msg>
+<msg timestamp="20180514 18:09:04.678" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:04.678" starttime="20180514 18:09:04.676"></status>
+</kw>
+<kw name="logoutqk">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@class="omit1 headerUserName"]</arg>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:04.680" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//a[@class=\"omit1 headerUserName\"]"}</msg>
+<msg timestamp="20180514 18:09:07.086" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:07.087" level="DEBUG">GET http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.4653077944101558-1/displayed {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.4653077944101558-1"}</msg>
+<msg timestamp="20180514 18:09:07.112" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:07.113" starttime="20180514 18:09:04.680"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@class="omit1 headerUserName"]</arg>
+</arguments>
+<msg timestamp="20180514 18:09:07.114" level="INFO">Clicking element '//a[@class="omit1 headerUserName"]'.</msg>
+<msg timestamp="20180514 18:09:07.114" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//a[@class=\"omit1 headerUserName\"]"}</msg>
+<msg timestamp="20180514 18:09:07.122" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:07.123" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.4653077944101558-1/click {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.4653077944101558-1"}</msg>
+<msg timestamp="20180514 18:09:07.191" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:07.191" starttime="20180514 18:09:07.113"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//ul[@class="navAccount"]</arg>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:07.192" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//ul[@class=\"navAccount\"]"}</msg>
+<msg timestamp="20180514 18:09:07.211" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:07.211" level="DEBUG">GET http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.4653077944101558-2/displayed {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.4653077944101558-2"}</msg>
+<msg timestamp="20180514 18:09:07.226" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:07.227" starttime="20180514 18:09:07.191"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@class="navAccount"]/li[7]</arg>
+</arguments>
+<msg timestamp="20180514 18:09:07.227" level="INFO">Clicking element '//ul[@class="navAccount"]/li[7]'.</msg>
+<msg timestamp="20180514 18:09:07.228" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//ul[@class=\"navAccount\"]/li[7]"}</msg>
+<msg timestamp="20180514 18:09:07.245" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:07.245" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.4653077944101558-3/click {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.4653077944101558-3"}</msg>
+<msg timestamp="20180514 18:09:07.298" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:07.299" starttime="20180514 18:09:07.227"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[contains(text(),"登录")]</arg>
+<arg>15s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:07.300" level="DEBUG">POST http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/elements {"using": "xpath", "sessionId": "2638796e6dff7f349205b464d2aa4377", "value": "//a[contains(text(),\"\u767b\u5f55\")]"}</msg>
+<msg timestamp="20180514 18:09:09.009" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:09.010" level="DEBUG">GET http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/element/0.4653077944101558-4/displayed {"sessionId": "2638796e6dff7f349205b464d2aa4377", "id": "0.4653077944101558-4"}</msg>
+<msg timestamp="20180514 18:09:09.033" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180514 18:09:09.034" level="DEBUG">GET http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377/screenshot {"sessionId": "2638796e6dff7f349205b464d2aa4377"}</msg>
+<msg timestamp="20180514 18:09:09.576" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:09.581" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180514 18:09:09.582" starttime="20180514 18:09:09.033"></status>
+</kw>
+<msg timestamp="20180514 18:09:09.584" level="FAIL">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+</msg>
+<msg timestamp="20180514 18:09:09.584" level="DEBUG">Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\SeleniumLibrary\__init__.py", line 360, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+  File "D:\Python27\lib\site-packages\SeleniumLibrary\base\robotlibcore.py", line 102, in run_keyword
+    return self.keywords[name](*args, **kwargs)
+  File "D:\Python27\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 134, in wait_until_element_is_visible
+    timeout, error
+  File "D:\Python27\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 220, in _wait_until
+    self._wait_until_worker(condition, timeout, error)
+  File "D:\Python27\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 227, in _wait_until_worker
+    if condition():
+  File "D:\Python27\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 132, in &lt;lambda&gt;
+    lambda: self.is_visible(locator),
+  File "D:\Python27\lib\site-packages\SeleniumLibrary\base\context.py", line 91, in is_visible
+    return element.is_displayed() if element else None
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\webelement.py", line 490, in is_displayed
+    return self._execute(Command.IS_ELEMENT_DISPLAYED)['value']
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)</msg>
+<status status="FAIL" endtime="20180514 18:09:09.584" starttime="20180514 18:09:07.299"></status>
+</kw>
+<status status="FAIL" endtime="20180514 18:09:09.585" starttime="20180514 18:09:04.678"></status>
+</kw>
+<kw type="teardown" name="CleanProcess">
+<kw name="Close Process" library="ClosedriverLibrary">
+<arguments>
+<arg>chromedriver</arg>
+</arguments>
+<status status="PASS" endtime="20180514 18:09:09.700" starttime="20180514 18:09:09.586"></status>
+</kw>
+<status status="PASS" endtime="20180514 18:09:09.701" starttime="20180514 18:09:09.585"></status>
+</kw>
+<status status="FAIL" endtime="20180514 18:09:09.701" critical="yes" starttime="20180514 18:08:49.220">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64)
+</status>
+</test>
+<test id="s1-s1-t2" name="publishedWords">
+<kw name="loginqk">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.kg.com/</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20180514 18:09:09.705" level="INFO">Opening browser 'chrome' to base url 'https://www.kg.com/'.</msg>
+<msg timestamp="20180514 18:09:12.738" level="DEBUG">POST http://127.0.0.1:61339/session {"capabilities": {"alwaysMatch": {"browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20180514 18:09:14.437" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:14.438" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/timeouts/async_script {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "ms": 5000.0}</msg>
+<msg timestamp="20180514 18:09:14.440" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:14.440" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/timeouts/implicit_wait {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "ms": 0.0}</msg>
+<msg timestamp="20180514 18:09:14.442" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:14.442" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/url {"url": "https://www.kg.com/", "sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:23.515" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:23.516" level="DEBUG">Opened browser with session id 1ea54719709fc66e81b156d30650cf7e.</msg>
+<status status="PASS" endtime="20180514 18:09:23.517" starttime="20180514 18:09:09.705"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20180514 18:09:23.520" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window/current/maximize {"windowHandle": "current", "sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:24.698" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:24.698" starttime="20180514 18:09:23.519"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 18:09:26.700" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:26.701" starttime="20180514 18:09:24.699"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(text(),"登录")]</arg>
+</arguments>
+<msg timestamp="20180514 18:09:26.703" level="INFO">Clicking element '//a[contains(text(),"登录")]'.</msg>
+<msg timestamp="20180514 18:09:26.704" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//a[contains(text(),\"\u767b\u5f55\")]"}</msg>
+<msg timestamp="20180514 18:09:26.735" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:26.736" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-1/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-1"}</msg>
+<msg timestamp="20180514 18:09:26.846" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:26.846" starttime="20180514 18:09:26.701"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 18:09:28.848" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:28.848" starttime="20180514 18:09:26.846"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='loginInput']</arg>
+</arguments>
+<msg timestamp="20180514 18:09:28.848" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//input[@id='loginInput']"}</msg>
+<msg timestamp="20180514 18:09:28.866" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:28.867" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-4/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-4"}</msg>
+<msg timestamp="20180514 18:09:28.890" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:28.890" starttime="20180514 18:09:28.848"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='loginInput']</arg>
+<arg>18109072521</arg>
+</arguments>
+<msg timestamp="20180514 18:09:28.891" level="INFO">Typing text '18109072521' into text field '//input[@id='loginInput']'.</msg>
+<msg timestamp="20180514 18:09:28.891" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//input[@id='loginInput']"}</msg>
+<msg timestamp="20180514 18:09:28.933" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:28.934" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-4/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-4"}</msg>
+<msg timestamp="20180514 18:09:28.943" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:28.944" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-4/value {"text": "18109072521", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-4", "value": ["1", "8", "1", "0", "9", "0", "7", "2", "5", "2", "1"]}</msg>
+<msg timestamp="20180514 18:09:29.073" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:29.073" starttime="20180514 18:09:28.890"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='bodyMain']</arg>
+</arguments>
+<msg timestamp="20180514 18:09:29.074" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//input[@id='bodyMain']"}</msg>
+<msg timestamp="20180514 18:09:29.091" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:29.092" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-5/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-5"}</msg>
+<msg timestamp="20180514 18:09:29.124" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:29.125" starttime="20180514 18:09:29.073"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='bodyMain']</arg>
+<arg>123456</arg>
+</arguments>
+<msg timestamp="20180514 18:09:29.126" level="INFO">Typing password into text field '//input[@id='bodyMain']'.</msg>
+<msg timestamp="20180514 18:09:29.126" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//input[@id='bodyMain']"}</msg>
+<msg timestamp="20180514 18:09:29.142" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:29.143" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-5/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-5"}</msg>
+<msg timestamp="20180514 18:09:29.156" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:29.156" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-5/value {"text": "123456", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-5", "value": ["1", "2", "3", "4", "5", "6"]}</msg>
+<msg timestamp="20180514 18:09:29.228" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:29.228" starttime="20180514 18:09:29.125"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button</arg>
+</arguments>
+<msg timestamp="20180514 18:09:29.229" level="INFO">Clicking button '//*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button'.</msg>
+<msg timestamp="20180514 18:09:29.229" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//*[@id=\"app\"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button"}</msg>
+<msg timestamp="20180514 18:09:29.255" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:29.255" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-6/name {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-6"}</msg>
+<msg timestamp="20180514 18:09:29.260" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:29.260" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//*[@id=\"app\"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button"}</msg>
+<msg timestamp="20180514 18:09:29.272" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:29.272" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-6/name {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-6"}</msg>
+<msg timestamp="20180514 18:09:29.275" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:29.276" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.4536155049407964-6/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.4536155049407964-6"}</msg>
+<msg timestamp="20180514 18:09:29.338" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:29.339" starttime="20180514 18:09:29.228"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 18:09:31.340" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:31.340" starttime="20180514 18:09:29.339"></status>
+</kw>
+<status status="PASS" endtime="20180514 18:09:31.340" starttime="20180514 18:09:09.704"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20180514 18:09:31.341" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window/current/maximize {"windowHandle": "current", "sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:31.343" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:31.343" starttime="20180514 18:09:31.341"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180514 18:09:32.345" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180514 18:09:32.345" starttime="20180514 18:09:31.343"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(),"写文章")]</arg>
+</arguments>
+<msg timestamp="20180514 18:09:32.347" level="INFO">Clicking element '//span[contains(text(),"写文章")]'.</msg>
+<msg timestamp="20180514 18:09:32.348" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//span[contains(text(),\"\u5199\u6587\u7ae0\")]"}</msg>
+<msg timestamp="20180514 18:09:32.375" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.375" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.7346454247089456-1/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.7346454247089456-1"}</msg>
+<msg timestamp="20180514 18:09:32.463" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:32.463" starttime="20180514 18:09:32.346"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>url=https://www.kg.com/account/details.html#/column</arg>
+</arguments>
+<msg timestamp="20180514 18:09:32.466" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handle {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:32.470" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.470" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handle {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:32.473" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.473" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handles {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:32.477" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.477" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "name": "CDwindow-530894914C33A5F2ABF03CBF3488541E"}</msg>
+<msg timestamp="20180514 18:09:32.518" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.518" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/execute {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "args": [], "script": "return [ window.id, window.name ];"}</msg>
+<msg timestamp="20180514 18:09:32.556" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.556" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handle {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:32.557" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.558" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/title {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:32.562" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.562" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/url {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:32.568" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.569" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "name": "CDwindow-3B986F026D7D5CA6988CD69DF53FB605"}</msg>
+<msg timestamp="20180514 18:09:32.617" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:32.617" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/execute {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "args": [], "script": "return [ window.id, window.name ];"}</msg>
+<msg timestamp="20180514 18:09:33.643" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:33.643" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handle {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:33.644" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:33.644" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/title {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:33.651" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:33.651" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/url {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:33.656" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:33.656" starttime="20180514 18:09:32.465"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//span[contains(text(),"发布视频")]</arg>
+<arg>15s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:33.657" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//span[contains(text(),\"\u53d1\u5e03\u89c6\u9891\")]"}</msg>
+<msg timestamp="20180514 18:09:33.673" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:33.673" starttime="20180514 18:09:33.656"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//span[contains(text(),"发表文章")]</arg>
+<arg>15s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:33.674" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//span[contains(text(),\"\u53d1\u8868\u6587\u7ae0\")]"}</msg>
+<msg timestamp="20180514 18:09:33.691" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:33.691" starttime="20180514 18:09:33.673"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(),"发表文章")]</arg>
+</arguments>
+<msg timestamp="20180514 18:09:33.692" level="INFO">Clicking element '//span[contains(text(),"发表文章")]'.</msg>
+<msg timestamp="20180514 18:09:33.692" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//span[contains(text(),\"\u53d1\u8868\u6587\u7ae0\")]"}</msg>
+<msg timestamp="20180514 18:09:33.702" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:33.703" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.0661077406288666-2/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.0661077406288666-2"}</msg>
+<msg timestamp="20180514 18:09:34.491" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:34.492" starttime="20180514 18:09:33.691"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180514 18:09:37.493" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:37.493" starttime="20180514 18:09:34.492"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>url=https://www.kg.com/publish/list.html</arg>
+</arguments>
+<msg timestamp="20180514 18:09:37.494" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handle {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.496" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.496" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handle {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.497" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.497" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handles {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.500" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.500" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "name": "CDwindow-530894914C33A5F2ABF03CBF3488541E"}</msg>
+<msg timestamp="20180514 18:09:37.542" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.542" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/execute {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "args": [], "script": "return [ window.id, window.name ];"}</msg>
+<msg timestamp="20180514 18:09:37.558" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.559" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handle {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.560" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.561" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/title {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.567" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.567" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/url {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.574" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.574" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "name": "CDwindow-3B986F026D7D5CA6988CD69DF53FB605"}</msg>
+<msg timestamp="20180514 18:09:37.618" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.619" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/execute {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "args": [], "script": "return [ window.id, window.name ];"}</msg>
+<msg timestamp="20180514 18:09:37.626" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.627" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/window_handle {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.629" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.629" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/title {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.634" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.635" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/url {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:37.640" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:37.640" starttime="20180514 18:09:37.494"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>dom=document.querySelector('div.el-form-item__content&gt;div&gt;input.el-input__inner')</arg>
+</arguments>
+<status status="PASS" endtime="20180514 18:09:37.641" starttime="20180514 18:09:37.641"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[1]/div/div[1]/input</arg>
+<arg>自动化测试</arg>
+</arguments>
+<msg timestamp="20180514 18:09:37.642" level="INFO">Typing text '自动化测试' into text field 'xpath=/html/body/div/div[2]/div[2]/div/form/div[1]/div/div[1]/input'.</msg>
+<msg timestamp="20180514 18:09:37.642" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[1]/div/div[1]/input"}</msg>
+<msg timestamp="20180514 18:09:37.659" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.659" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-1/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-1"}</msg>
+<msg timestamp="20180514 18:09:37.680" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.680" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-1/value {"text": "\u81ea\u52a8\u5316\u6d4b\u8bd5", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-1", "value": ["\u81ea", "\u52a8", "\u5316", "\u6d4b", "\u8bd5"]}</msg>
+<msg timestamp="20180514 18:09:37.790" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:37.790" starttime="20180514 18:09:37.641"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='toolbar']/../div[2]/div[1]</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:37.791" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//div[@id='toolbar']/../div[2]/div[1]"}</msg>
+<msg timestamp="20180514 18:09:37.805" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.805" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-2/displayed {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-2"}</msg>
+<msg timestamp="20180514 18:09:37.821" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:37.821" starttime="20180514 18:09:37.790"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@id='toolbar']/../div[2]/div[1]</arg>
+<arg>天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；</arg>
+</arguments>
+<msg timestamp="20180514 18:09:37.822" level="INFO">Typing text '天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；' into text field '//div[@id='toolbar']/../div[2]/div[1]'.</msg>
+<msg timestamp="20180514 18:09:37.822" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//div[@id='toolbar']/../div[2]/div[1]"}</msg>
+<msg timestamp="20180514 18:09:37.831" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.831" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-2/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-2"}</msg>
+<msg timestamp="20180514 18:09:37.884" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:37.884" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-2/value {"text": "\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-2", "value": ["\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b"]}</msg>
+<msg timestamp="20180514 18:09:39.149" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:39.149" starttime="20180514 18:09:37.821"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.documentElement.scrollTop=600</arg>
+</arguments>
+<msg timestamp="20180514 18:09:39.150" level="INFO">Executing JavaScript:
+document.documentElement.scrollTop=600</msg>
+<msg timestamp="20180514 18:09:39.150" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/execute {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "args": [], "script": "document.documentElement.scrollTop=600"}</msg>
+<msg timestamp="20180514 18:09:39.155" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:39.155" starttime="20180514 18:09:39.149"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Focus</arg>
+<arg>/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input</arg>
+</arguments>
+<status status="PASS" endtime="20180514 18:09:39.156" starttime="20180514 18:09:39.156"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:39.157" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input"}</msg>
+<msg timestamp="20180514 18:09:39.174" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:39.174" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-3/displayed {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-3"}</msg>
+<msg timestamp="20180514 18:09:39.188" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:39.189" starttime="20180514 18:09:39.156"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input</arg>
+<arg>12</arg>
+</arguments>
+<msg timestamp="20180514 18:09:39.189" level="INFO">Typing text '12' into text field 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input'.</msg>
+<msg timestamp="20180514 18:09:39.190" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input"}</msg>
+<msg timestamp="20180514 18:09:39.197" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:39.197" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-3/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-3"}</msg>
+<msg timestamp="20180514 18:09:39.214" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:39.214" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-3/value {"text": "12", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-3", "value": ["1", "2"]}</msg>
+<msg timestamp="20180514 18:09:39.280" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:39.281" starttime="20180514 18:09:39.189"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Focus</arg>
+<arg>/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input</arg>
+</arguments>
+<status status="PASS" endtime="20180514 18:09:39.281" starttime="20180514 18:09:39.281"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input</arg>
+<arg>34</arg>
+</arguments>
+<msg timestamp="20180514 18:09:39.282" level="INFO">Typing text '34' into text field 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input'.</msg>
+<msg timestamp="20180514 18:09:39.282" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input"}</msg>
+<msg timestamp="20180514 18:09:39.297" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:39.297" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-4/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-4"}</msg>
+<msg timestamp="20180514 18:09:39.328" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:39.328" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-4/value {"text": "34", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-4", "value": ["3", "4"]}</msg>
+<msg timestamp="20180514 18:09:39.394" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:39.395" starttime="20180514 18:09:39.282"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Focus</arg>
+<arg>/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input</arg>
+</arguments>
+<status status="PASS" endtime="20180514 18:09:39.396" starttime="20180514 18:09:39.396"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input</arg>
+<arg>56</arg>
+</arguments>
+<msg timestamp="20180514 18:09:39.397" level="INFO">Typing text '56' into text field 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input'.</msg>
+<msg timestamp="20180514 18:09:39.397" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input"}</msg>
+<msg timestamp="20180514 18:09:39.415" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:39.415" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-5/clear {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-5"}</msg>
+<msg timestamp="20180514 18:09:39.451" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:39.451" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-5/value {"text": "56", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-5", "value": ["5", "6"]}</msg>
+<msg timestamp="20180514 18:09:39.501" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:39.501" starttime="20180514 18:09:39.397"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20180514 18:09:40.002" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20180514 18:09:40.003" starttime="20180514 18:09:39.502"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.documentElement.scrollTop=800</arg>
+</arguments>
+<msg timestamp="20180514 18:09:40.005" level="INFO">Executing JavaScript:
+document.documentElement.scrollTop=800</msg>
+<msg timestamp="20180514 18:09:40.006" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/execute {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "args": [], "script": "document.documentElement.scrollTop=800"}</msg>
+<msg timestamp="20180514 18:09:40.021" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:40.022" starttime="20180514 18:09:40.004"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[2]/div/div[2]/div[1]/img</arg>
+</arguments>
+<msg timestamp="20180514 18:09:40.023" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[2]/div/div[2]/div[1]/img'.</msg>
+<msg timestamp="20180514 18:09:40.024" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[2]/div/div[2]/div[1]/img"}</msg>
+<msg timestamp="20180514 18:09:40.050" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:40.051" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-6/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-6"}</msg>
+<msg timestamp="20180514 18:09:40.139" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:40.139" starttime="20180514 18:09:40.023"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:40.140" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span"}</msg>
+<msg timestamp="20180514 18:09:40.157" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:40.157" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-7/displayed {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-7"}</msg>
+<msg timestamp="20180514 18:09:40.172" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:40.172" starttime="20180514 18:09:40.140"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span</arg>
+</arguments>
+<msg timestamp="20180514 18:09:40.173" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span'.</msg>
+<msg timestamp="20180514 18:09:40.173" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span"}</msg>
+<msg timestamp="20180514 18:09:40.183" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:40.184" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-7/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-7"}</msg>
+<msg timestamp="20180514 18:09:40.241" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:40.241" starttime="20180514 18:09:40.173"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:40.242" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span"}</msg>
+<msg timestamp="20180514 18:09:40.274" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:40.275" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-8/displayed {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-8"}</msg>
+<msg timestamp="20180514 18:09:40.290" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:40.291" starttime="20180514 18:09:40.241"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span</arg>
+</arguments>
+<msg timestamp="20180514 18:09:40.292" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span'.</msg>
+<msg timestamp="20180514 18:09:40.292" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span"}</msg>
+<msg timestamp="20180514 18:09:40.303" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:40.303" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-8/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-8"}</msg>
+<msg timestamp="20180514 18:09:40.359" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:40.360" starttime="20180514 18:09:40.291"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180514 18:09:41.362" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180514 18:09:41.363" starttime="20180514 18:09:40.360"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class='el-button el-button--primary']/span[contains(text(),"发表文章")]</arg>
+</arguments>
+<msg timestamp="20180514 18:09:41.364" level="INFO">Clicking element '//button[@class='el-button el-button--primary']/span[contains(text(),"发表文章")]'.</msg>
+<msg timestamp="20180514 18:09:41.365" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//button[@class='el-button el-button--primary']/span[contains(text(),\"\u53d1\u8868\u6587\u7ae0\")]"}</msg>
+<msg timestamp="20180514 18:09:41.399" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:41.400" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-9/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-9"}</msg>
+<msg timestamp="20180514 18:09:41.485" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:41.486" starttime="20180514 18:09:41.363"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Execute Javascript</arg>
+<arg>document.documentElement.scrollTop=10000</arg>
+</arguments>
+<status status="PASS" endtime="20180514 18:09:41.487" starttime="20180514 18:09:41.486"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),"我知道了")]</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 18:09:41.488" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//span[contains(text(),\"\u6211\u77e5\u9053\u4e86\")]"}</msg>
+<msg timestamp="20180514 18:09:41.523" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:41.723" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//span[contains(text(),\"\u6211\u77e5\u9053\u4e86\")]"}</msg>
+<msg timestamp="20180514 18:09:41.735" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:41.736" level="DEBUG">GET http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-10/displayed {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-10"}</msg>
+<msg timestamp="20180514 18:09:41.754" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:41.754" starttime="20180514 18:09:41.487"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),"我知道了")]</arg>
+</arguments>
+<msg timestamp="20180514 18:09:41.755" level="INFO">Clicking element 'xpath=//span[contains(text(),"我知道了")]'.</msg>
+<msg timestamp="20180514 18:09:41.756" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/elements {"using": "xpath", "sessionId": "1ea54719709fc66e81b156d30650cf7e", "value": "//span[contains(text(),\"\u6211\u77e5\u9053\u4e86\")]"}</msg>
+<msg timestamp="20180514 18:09:41.768" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 18:09:41.768" level="DEBUG">POST http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e/element/0.6188309729191666-10/click {"sessionId": "1ea54719709fc66e81b156d30650cf7e", "id": "0.6188309729191666-10"}</msg>
+<msg timestamp="20180514 18:09:41.837" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:41.838" starttime="20180514 18:09:41.755"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180514 18:09:46.838" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:46.838" starttime="20180514 18:09:41.838"></status>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20180514 18:09:46.839" level="DEBUG">Closing all browsers.</msg>
+<msg timestamp="20180514 18:09:46.839" level="DEBUG">DELETE http://127.0.0.1:61273/session/2638796e6dff7f349205b464d2aa4377 {"sessionId": "2638796e6dff7f349205b464d2aa4377"}</msg>
+<msg timestamp="20180514 18:09:48.844" level="DEBUG">DELETE http://127.0.0.1:61339/session/1ea54719709fc66e81b156d30650cf7e {"sessionId": "1ea54719709fc66e81b156d30650cf7e"}</msg>
+<msg timestamp="20180514 18:09:48.880" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 18:09:51.888" starttime="20180514 18:09:46.839"></status>
+</kw>
+<kw type="teardown" name="CleanProcess">
+<kw name="Close Process" library="ClosedriverLibrary">
+<arguments>
+<arg>chromedriver</arg>
+</arguments>
+<status status="PASS" endtime="20180514 18:09:52.056" starttime="20180514 18:09:51.892"></status>
+</kw>
+<status status="PASS" endtime="20180514 18:09:52.057" starttime="20180514 18:09:51.890"></status>
+</kw>
+<status status="PASS" endtime="20180514 18:09:52.058" critical="yes" starttime="20180514 18:09:09.703"></status>
+</test>
+<test id="s1-s1-t3" name="register">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>172.16.0.16</arg>
+</arguments>
+<status status="PASS" endtime="20180514 18:09:52.063" starttime="20180514 18:09:52.062"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>test_xkj</arg>
+<arg>xkj123456</arg>
+</arguments>
+<msg timestamp="20180514 18:09:52.064" level="INFO">Logging into '172.16.0.16:22' as 'test_xkj'.</msg>
+<msg timestamp="20180514 18:09:52.204" level="DEBUG">Adding ssh-rsa host key for 172.16.0.16: ab2c4db2604098c0135e5061619e272b</msg>
+<msg timestamp="20180514 18:09:52.270" level="DEBUG">[chan 0] Max packet in: 32768 bytes</msg>
+<msg timestamp="20180514 18:09:53.277" level="INFO">Read output: Last login: Mon May 14 18:03:25 2018 from 172.16.0.217
+[test_xkj@localhost ~]$</msg>
+<status status="PASS" endtime="20180514 18:09:53.278" starttime="20180514 18:09:52.063"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180514 18:09:54.281" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180514 18:09:54.282" starttime="20180514 18:09:53.280"></status>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<doc>Executes `command` on the remote machine and returns its outputs.</doc>
+<arguments>
+<arg>tail -200 /data/tomcat/logs/catalina.out</arg>
+</arguments>
+<assign>
+<var>${log}</var>
+</assign>
+<msg timestamp="20180514 18:09:54.285" level="INFO">Executing command 'tail -200 /data/tomcat/logs/catalina.out'.</msg>
+<msg timestamp="20180514 18:09:54.286" level="DEBUG">[chan 1] Max packet in: 32768 bytes</msg>
+<msg timestamp="20180514 18:09:54.314" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20180514 18:09:54.316" level="INFO">${log} = 2018-05-14 18:09:32,792 [catalina-exec-18] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/userprofile/getProfile,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281...</msg>
+<status status="PASS" endtime="20180514 18:09:54.317" starttime="20180514 18:09:54.283"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 18:09:56.322" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 18:09:56.323" starttime="20180514 18:09:54.319"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${log}</arg>
+</arguments>
+<msg timestamp="20180514 18:09:56.327" level="INFO">2018-05-14 18:09:32,792 [catalina-exec-18] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/userprofile/getProfile,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==7c9f70d2fd8a066c63faecb7db416a99
+2018-05-14 18:09:32,792 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:32,793 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:32,796 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:32,796 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:32,798 [catalina-exec-18] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:32,798 [catalina-exec-18] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:32,798 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/checkProfile/ 入参是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:32,798 [catalina-exec-15] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==
+2018-05-14 18:09:32,798 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/checkProfile/ 执行后是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:32,798 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 3c986b2d-bf02-44e6-8b7d-5be88c52f6aa;desc: http request by rest param: {"userId":"438281696383737856"}
+2018-05-14 18:09:32,798 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/checkProfile/ 入参是：{"userId":"438281696383737856"} 
+2018-05-14 18:09:32,798 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:32,798 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/userprofile/checkProfile/,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==7c9f70d2fd8a066c63faecb7db416a99
+2018-05-14 18:09:32,798 [catalina-exec-18] INFO  com.kg.platform.service.impl.UserProfileServiceImpl - 获取用户资料入参：UserProfileRequest={"userId":438281696383737856}
+2018-05-14 18:09:32,799 [catalina-exec-18] INFO  com.kg.platform.common.utils.HttpUtil - 获取到的用户ip：172.16.0.217
+2018-05-14 18:09:32,801 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:32,801 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:32,840 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/getuserArticleAll/ 入参是：eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ== 
+2018-05-14 18:09:32,840 [catalina-exec-17] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ==
+2018-05-14 18:09:32,840 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/getuserArticleAll/ 执行后是：eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ== 
+2018-05-14 18:09:32,840 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: da8677be-6acd-48d6-bc46-a10b071afa89;desc: http request by rest param: {"createUser":"438281696383737856","currentPage":1,"publishStatus":""}
+2018-05-14 18:09:32,840 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/getuserArticleAll/ 入参是：{"currentPage":1,"createUser":"438281696383737856","publishStatus":""} 
+2018-05-14 18:09:32,841 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:32,841 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/getuserArticleAll/,data==eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==ba1cab9e28c6cf9795a2dbd642701964
+2018-05-14 18:09:32,843 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:32,843 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:32,844 [catalina-exec-17] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 我的专栏我的文章前端入参：{"createUser":438281696383737856,"currentPage":1,"limit":0,"publishStatus":"","start":0},分页入参：{"currentPage":1,"data":["eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ=="],"pageSize":20,"totalNumber":0,"totalPage":0}
+2018-05-14 18:09:33,819 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 入参是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:33,819 [catalina-exec-19] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==
+2018-05-14 18:09:33,819 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 执行后是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:33,819 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 828b9ec3-af42-4ac0-9f66-c574b1e501fa;desc: http request by rest param: {"userId":"438281696383737856"}
+2018-05-14 18:09:33,819 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 入参是：{"userId":"438281696383737856"} 
+2018-05-14 18:09:33,820 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:33,820 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/disciple/inviteRemind,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==7c9f70d2fd8a066c63faecb7db416a99
+2018-05-14 18:09:33,822 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:33,822 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:34,177 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/getProfile 入参是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:34,177 [catalina-exec-20] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==
+2018-05-14 18:09:34,177 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/getProfile 执行后是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:34,177 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 600e5d9a-2109-4c77-bd72-d19a12e5df08;desc: http request by rest param: {"userId":"438281696383737856"}
+2018-05-14 18:09:34,177 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/getProfile 入参是：{"userId":"438281696383737856"} 
+2018-05-14 18:09:34,178 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:34,178 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/userprofile/getProfile,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==7c9f70d2fd8a066c63faecb7db416a99
+2018-05-14 18:09:34,180 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:34,180 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:34,181 [catalina-exec-20] INFO  com.kg.platform.service.impl.UserProfileServiceImpl - 获取用户资料入参：UserProfileRequest={"userId":438281696383737856}
+2018-05-14 18:09:34,181 [catalina-exec-20] INFO  com.kg.platform.common.utils.HttpUtil - 获取到的用户ip：172.16.0.217
+(1) unicode转换成中文前的returnStr : {"code":0,"data":{"ip":"172.16.0.217","country":"XX","area":"","region":"XX","city":"内网IP","county":"内网IP","isp":"内网IP","country_id":"xx","area_id":"","region_id":"xx","city_id":"local","county_id":"local","isp_id":"local"}}
+(2) unicode转换成中文后的returnStr : {"code":0,"data":{"ip":"172.16.0.217","country":"XX","area":"","region":"XX","city":"内网IP","county":"内网IP","isp":"内网IP","country_id":"xx","area_id":"","region_id":"xx","city_id":"local","county_id":"local","isp_id":"local"}}
+json数据： {"area":"","country":"XX","isp_id":"local","city":"内网IP","ip":"172.16.0.217","isp":"内网IP","county":"内网IP","region_id":"xx","area_id":"","county_id":"local","region":"XX","country_id":"xx","city_id":"local"}
+json数据： {"area":"","area_id":"","city":"内网IP","city_id":"local","country":"XX","country_id":"xx","county":"内网IP","county_id":"local","ip":"172.16.0.217","isp":"内网IP","isp_id":"local","region":"XX","region_id":"xx"}
+(1) unicode转换成中文前的returnStr : {"code":0,"data":{"ip":"172.16.0.217","country":"XX","area":"","region":"XX","city":"内网IP","county":"内网IP","isp":"内网IP","country_id":"xx","area_id":"","region_id":"xx","city_id":"local","county_id":"local","isp_id":"local"}}
+(2) unicode转换成中文后的returnStr : {"code":0,"data":{"ip":"172.16.0.217","country":"XX","area":"","region":"XX","city":"内网IP","county":"内网IP","isp":"内网IP","country_id":"xx","area_id":"","region_id":"xx","city_id":"local","county_id":"local","isp_id":"local"}}
+json数据： {"area":"","country":"XX","isp_id":"local","city":"内网IP","ip":"172.16.0.217","isp":"内网IP","county":"内网IP","region_id":"xx","area_id":"","county_id":"local","region":"XX","country_id":"xx","city_id":"local"}
+json数据： {"area":"","area_id":"","city":"内网IP","city_id":"local","country":"XX","country_id":"xx","county":"内网IP","county_id":"local","ip":"172.16.0.217","isp":"内网IP","isp_id":"local","region":"XX","region_id":"xx"}
+2018-05-14 18:09:37,611 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjpudWxsLCJhcnRpY2xlSW1hZ2UiOm51bGwsImFydGljbGVUZXh0IjoiIiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoiIiwiYXJ0aWNsZVRhZ25hbWVzIjoiIiwiYXJ0aWNsZVR5cGUiOiIiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIiLCJwdWJsaXNoU3RhdHVzIjo0LCJ0ZXh0bnVtIjowfQ== 
+2018-05-14 18:09:37,611 [catalina-exec-7] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjpudWxsLCJhcnRpY2xlSW1hZ2UiOm51bGwsImFydGljbGVUZXh0IjoiIiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoiIiwiYXJ0aWNsZVRhZ25hbWVzIjoiIiwiYXJ0aWNsZVR5cGUiOiIiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIiLCJwdWJsaXNoU3RhdHVzIjo0LCJ0ZXh0bnVtIjowfQ==
+2018-05-14 18:09:37,611 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 执行后是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjpudWxsLCJhcnRpY2xlSW1hZ2UiOm51bGwsImFydGljbGVUZXh0IjoiIiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoiIiwiYXJ0aWNsZVRhZ25hbWVzIjoiIiwiYXJ0aWNsZVR5cGUiOiIiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIiLCJwdWJsaXNoU3RhdHVzIjo0LCJ0ZXh0bnVtIjowfQ== 
+2018-05-14 18:09:37,612 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: c48228d2-df25-4465-b05e-87f82569b6a9;desc: http request by rest param: {"articleTitle":"自动化测试","bonusStatus":"","textnum":0,"articleDescription":"","articleType":"","articleText":"","articleTagnames":"","createUser":"438281696383737856","articleFrom":1,"publishStatus":4}
+2018-05-14 18:09:37,612 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：{"createUser":"438281696383737856","articleTitle":"自动化测试","articleId":null,"articleImage":null,"articleText":"","articleDescription":"","articleTagnames":"","articleType":"","articleFrom":1,"bonusStatus":"","publishStatus":4,"textnum":0} 
+2018-05-14 18:09:37,613 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++multipart/form-data; boundary=----WebKitFormBoundaryD9D6SwBaWyCWYWqt
+2018-05-14 18:09:37,613 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/AddArticle,data==eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjpudWxsLCJhcnRpY2xlSW1hZ2UiOm51bGwsImFydGljbGVUZXh0IjoiIiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoiIiwiYXJ0aWNsZVRhZ25hbWVzIjoiIiwiYXJ0aWNsZVR5cGUiOiIiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIiLCJwdWJsaXNoU3RhdHVzIjo0LCJ0ZXh0bnVtIjowfQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==868baa5b0ae1e6cc976c9854273853be
+2018-05-14 18:09:37,616 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:37,616 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:37,630 [catalina-exec-7] INFO  com.kg.platform.common.lock.Lock - 获取锁 [kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程 [catalina-exec-7]
+2018-05-14 18:09:37,634 [catalina-exec-7] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 文章保存用户id 438281696383737856,文章Id445648900477558784
+2018-05-14 18:09:37,634 [catalina-exec-7] INFO  com.kg.platform.common.lock.Lock - 解锁[kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程[catalina-exec-7]
+2018-05-14 18:09:38,962 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiIiwiYXJ0aWNsZVR5cGUiOiIiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIiLCJwdWJsaXNoU3RhdHVzIjo0LCJ0ZXh0bnVtIjowfQ== 
+2018-05-14 18:09:38,962 [catalina-exec-12] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiIiwiYXJ0aWNsZVR5cGUiOiIiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIiLCJwdWJsaXNoU3RhdHVzIjo0LCJ0ZXh0bnVtIjowfQ==
+2018-05-14 18:09:38,962 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 执行后是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiIiwiYXJ0aWNsZVR5cGUiOiIiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIiLCJwdWJsaXNoU3RhdHVzIjo0LCJ0ZXh0bnVtIjowfQ== 
+2018-05-14 18:09:38,962 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 62e8c5bb-1fd5-4450-98b5-b03dfd354a81;desc: http request by rest param: {"articleTitle":"自动化测试","bonusStatus":"","textnum":0,"articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleType":"","articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleId":"445648900477558784","articleTagnames":"","createUser":"438281696383737856","articleFrom":1,"publishStatus":4}
+2018-05-14 18:09:38,962 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：{"createUser":"438281696383737856","articleTitle":"自动化测试","articleId":"445648900477558784","articleImage":null,"articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleTagnames":"","articleType":"","articleFrom":1,"bonusStatus":"","publishStatus":4,"textnum":0} 
+2018-05-14 18:09:38,963 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++multipart/form-data; boundary=----WebKitFormBoundaryVwAAcQvLWJ9fK053
+2018-05-14 18:09:38,963 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/AddArticle,data==eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiIiwiYXJ0aWNsZVR5cGUiOiIiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIiLCJwdWJsaXNoU3RhdHVzIjo0LCJ0ZXh0bnVtIjowfQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==de40dbf58bbf6fd80f3341f3612fef25
+2018-05-14 18:09:38,966 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:38,966 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:38,972 [catalina-exec-12] INFO  com.kg.platform.common.lock.Lock - 获取锁 [kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程 [catalina-exec-12]
+2018-05-14 18:09:38,975 [catalina-exec-12] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 文章保存用户id 438281696383737856,文章Id445648900477558784
+2018-05-14 18:09:38,978 [catalina-exec-12] INFO  com.kg.platform.common.lock.Lock - 解锁[kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程[catalina-exec-12]
+2018-05-14 18:09:39,061 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9 
+2018-05-14 18:09:39,062 [catalina-exec-15] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9
+2018-05-14 18:09:39,062 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 执行后是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9 
+2018-05-14 18:09:39,062 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 6b03c114-0efd-45ee-9070-e5da73d7585e;desc: http request by rest param: {"articleTitle":"自动化测试","bonusStatus":"","textnum":0,"articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleType":"","articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleId":"445648900477558784","articleTagnames":"12","createUser":"438281696383737856","articleFrom":1,"publishStatus":4}
+2018-05-14 18:09:39,062 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：{"createUser":"438281696383737856","articleTitle":"自动化测试","articleId":"445648900477558784","articleImage":null,"articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleTagnames":"12","articleType":"","articleFrom":1,"bonusStatus":"","publishStatus":4,"textnum":0} 
+2018-05-14 18:09:39,062 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++multipart/form-data; boundary=----WebKitFormBoundaryJmFnHRy88Jsp8OOx
+2018-05-14 18:09:39,062 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/AddArticle,data==eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==52de29b10e08c31a03a1d5ed8b564d20
+2018-05-14 18:09:39,065 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:39,065 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:39,071 [catalina-exec-15] INFO  com.kg.platform.common.lock.Lock - 获取锁 [kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程 [catalina-exec-15]
+2018-05-14 18:09:39,072 [catalina-exec-15] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 文章保存用户id 438281696383737856,文章Id445648900477558784
+2018-05-14 18:09:39,075 [catalina-exec-15] INFO  com.kg.platform.common.lock.Lock - 解锁[kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程[catalina-exec-15]
+2018-05-14 18:09:39,188 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9 
+2018-05-14 18:09:39,188 [catalina-exec-17] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9
+2018-05-14 18:09:39,188 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 执行后是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9 
+2018-05-14 18:09:39,188 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 6cdf0644-8218-4cd8-8255-d21eb89b7c64;desc: http request by rest param: {"articleTitle":"自动化测试","bonusStatus":"","textnum":0,"articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleType":"","articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleId":"445648900477558784","articleTagnames":"12,34","createUser":"438281696383737856","articleFrom":1,"publishStatus":4}
+2018-05-14 18:09:39,188 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：{"createUser":"438281696383737856","articleTitle":"自动化测试","articleId":"445648900477558784","articleImage":null,"articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleTagnames":"12,34","articleType":"","articleFrom":1,"bonusStatus":"","publishStatus":4,"textnum":0} 
+2018-05-14 18:09:39,189 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++multipart/form-data; boundary=----WebKitFormBoundaryZ0kNZuQ2vch0flbl
+2018-05-14 18:09:39,189 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/AddArticle,data==eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==92a4ce65e2af27888a65fd0ab6486465
+2018-05-14 18:09:39,191 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:39,191 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:39,198 [catalina-exec-17] INFO  com.kg.platform.common.lock.Lock - 获取锁 [kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程 [catalina-exec-17]
+2018-05-14 18:09:39,201 [catalina-exec-17] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 文章保存用户id 438281696383737856,文章Id445648900477558784
+2018-05-14 18:09:39,204 [catalina-exec-17] INFO  com.kg.platform.common.lock.Lock - 解锁[kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程[catalina-exec-17]
+2018-05-14 18:09:39,856 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQsNTYiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9 
+2018-05-14 18:09:39,856 [catalina-exec-19] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQsNTYiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9
+2018-05-14 18:09:39,856 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 执行后是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQsNTYiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9 
+2018-05-14 18:09:39,856 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 86bfbc57-8b27-42e2-b85f-39c6a96c086a;desc: http request by rest param: {"articleTitle":"自动化测试","bonusStatus":"","textnum":0,"articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleType":"","articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleId":"445648900477558784","articleTagnames":"12,34,56","createUser":"438281696383737856","articleFrom":1,"publishStatus":4}
+2018-05-14 18:09:39,856 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：{"createUser":"438281696383737856","articleTitle":"自动化测试","articleId":"445648900477558784","articleImage":null,"articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleTagnames":"12,34,56","articleType":"","articleFrom":1,"bonusStatus":"","publishStatus":4,"textnum":0} 
+2018-05-14 18:09:39,856 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++multipart/form-data; boundary=----WebKitFormBoundaryWvtY5dRxeBEL035J
+2018-05-14 18:09:39,856 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/AddArticle,data==eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQsNTYiLCJhcnRpY2xlVHlwZSI6IiIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IiIsInB1Ymxpc2hTdGF0dXMiOjQsInRleHRudW0iOjB9,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==a5b0a27bbd1a887651c57fb9612c7ef6
+2018-05-14 18:09:39,859 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:39,859 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:39,866 [catalina-exec-19] INFO  com.kg.platform.common.lock.Lock - 获取锁 [kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程 [catalina-exec-19]
+2018-05-14 18:09:39,869 [catalina-exec-19] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 文章保存用户id 438281696383737856,文章Id445648900477558784
+2018-05-14 18:09:39,872 [catalina-exec-19] INFO  com.kg.platform.common.lock.Lock - 解锁[kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程[catalina-exec-19]
+2018-05-14 18:09:39,891 [catalina-exec-18] INFO  com.kg.core.imgsrv.service.impl.ImgUploadServiceImpl - 上传图片,reqModel: {createBy:123456789,
+files:[
+	{
+	blob},
+]
+}
+2018-05-14 18:09:40,100 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQsNTYiLCJhcnRpY2xlVHlwZSI6IjEiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIxIiwicHVibGlzaFN0YXR1cyI6NCwidGV4dG51bSI6MH0= 
+2018-05-14 18:09:40,100 [catalina-exec-20] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQsNTYiLCJhcnRpY2xlVHlwZSI6IjEiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIxIiwicHVibGlzaFN0YXR1cyI6NCwidGV4dG51bSI6MH0=
+2018-05-14 18:09:40,101 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 执行后是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQsNTYiLCJhcnRpY2xlVHlwZSI6IjEiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIxIiwicHVibGlzaFN0YXR1cyI6NCwidGV4dG51bSI6MH0= 
+2018-05-14 18:09:40,101 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: fed838e8-ccdb-4593-b408-e023707b32e7;desc: http request by rest param: {"articleTitle":"自动化测试","bonusStatus":"1","textnum":0,"articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleType":"1","articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleId":"445648900477558784","articleTagnames":"12,34,56","createUser":"438281696383737856","articleFrom":1,"publishStatus":4}
+2018-05-14 18:09:40,101 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：{"createUser":"438281696383737856","articleTitle":"自动化测试","articleId":"445648900477558784","articleImage":null,"articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleTagnames":"12,34,56","articleType":"1","articleFrom":1,"bonusStatus":"1","publishStatus":4,"textnum":0} 
+2018-05-14 18:09:40,101 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++multipart/form-data; boundary=----WebKitFormBoundary4s4vJ5qIiOpA0wbC
+2018-05-14 18:09:40,101 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/AddArticle,data==eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjpudWxsLCJhcnRpY2xlVGV4dCI6IjxwPuWkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8m+WkqeepuumjmOadpeS6lOS4quWtl++8jOmCo+mDveS4jeaYr+S6i++8myA8L3A+IiwiYXJ0aWNsZURlc2NyaXB0aW9uIjoi5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m6IiwiYXJ0aWNsZVRhZ25hbWVzIjoiMTIsMzQsNTYiLCJhcnRpY2xlVHlwZSI6IjEiLCJhcnRpY2xlRnJvbSI6MSwiYm9udXNTdGF0dXMiOiIxIiwicHVibGlzaFN0YXR1cyI6NCwidGV4dG51bSI6MH0=,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==c79e90c6640341cd199d31bef7cf8e38
+2018-05-14 18:09:40,104 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:40,104 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:40,109 [catalina-exec-20] INFO  com.kg.platform.common.lock.Lock - 获取锁 [kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程 [catalina-exec-20]
+2018-05-14 18:09:40,112 [catalina-exec-20] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 文章保存用户id 438281696383737856,文章Id445648900477558784
+2018-05-14 18:09:40,114 [catalina-exec-20] INFO  com.kg.platform.common.lock.Lock - 解锁[kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程[catalina-exec-20]
+2018-05-14 18:09:40,420 [catalina-exec-18] INFO  com.kg.platform.controller.ImageUploadController - 图片上传效率：539
+2018-05-14 18:09:41,216 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjoiMTc1OTAvNDE4Mzk5Mzg3NjEwMzkwNTI4LnBuZyIsImFydGljbGVUZXh0IjoiPHA+5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77ybIDwvcD4iLCJhcnRpY2xlRGVzY3JpcHRpb24iOiLlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqboiLCJhcnRpY2xlVGFnbmFtZXMiOiIxMiwzNCw1NiIsImFydGljbGVUeXBlIjoiMSIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IjEiLCJ0ZXh0bnVtIjoxNTQsInB1Ymxpc2hTdGF0dXMiOjJ9 
+2018-05-14 18:09:41,216 [catalina-exec-7] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjoiMTc1OTAvNDE4Mzk5Mzg3NjEwMzkwNTI4LnBuZyIsImFydGljbGVUZXh0IjoiPHA+5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77ybIDwvcD4iLCJhcnRpY2xlRGVzY3JpcHRpb24iOiLlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqboiLCJhcnRpY2xlVGFnbmFtZXMiOiIxMiwzNCw1NiIsImFydGljbGVUeXBlIjoiMSIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IjEiLCJ0ZXh0bnVtIjoxNTQsInB1Ymxpc2hTdGF0dXMiOjJ9
+2018-05-14 18:09:41,216 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 执行后是：eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjoiMTc1OTAvNDE4Mzk5Mzg3NjEwMzkwNTI4LnBuZyIsImFydGljbGVUZXh0IjoiPHA+5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77ybIDwvcD4iLCJhcnRpY2xlRGVzY3JpcHRpb24iOiLlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqboiLCJhcnRpY2xlVGFnbmFtZXMiOiIxMiwzNCw1NiIsImFydGljbGVUeXBlIjoiMSIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IjEiLCJ0ZXh0bnVtIjoxNTQsInB1Ymxpc2hTdGF0dXMiOjJ9 
+2018-05-14 18:09:41,216 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: f6c560c5-c53c-4f06-a247-01c16aa533af;desc: http request by rest param: {"articleTitle":"自动化测试","articleImage":"17590/418399387610390528.png","bonusStatus":"1","textnum":154,"articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleType":"1","articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleId":"445648900477558784","articleTagnames":"12,34,56","createUser":"438281696383737856","articleFrom":1,"publishStatus":2}
+2018-05-14 18:09:41,216 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/AddArticle 入参是：{"createUser":"438281696383737856","articleTitle":"自动化测试","articleId":"445648900477558784","articleImage":"17590/418399387610390528.png","articleText":"&lt;p&gt;天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事； &lt;/p&gt;","articleDescription":"天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空","articleTagnames":"12,34,56","articleType":"1","articleFrom":1,"bonusStatus":"1","textnum":154,"publishStatus":2} 
+2018-05-14 18:09:41,217 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++multipart/form-data; boundary=----WebKitFormBoundaryB9KvCKWj0AF1A1FE
+2018-05-14 18:09:41,217 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/AddArticle,data==eyJjcmVhdGVVc2VyIjoiNDM4MjgxNjk2MzgzNzM3ODU2IiwiYXJ0aWNsZVRpdGxlIjoi6Ieq5Yqo5YyW5rWL6K+VIiwiYXJ0aWNsZUlkIjoiNDQ1NjQ4OTAwNDc3NTU4Nzg0IiwiYXJ0aWNsZUltYWdlIjoiMTc1OTAvNDE4Mzk5Mzg3NjEwMzkwNTI4LnBuZyIsImFydGljbGVUZXh0IjoiPHA+5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77yb5aSp56m66aOY5p2l5LqU5Liq5a2X77yM6YKj6YO95LiN5piv5LqL77ybIDwvcD4iLCJhcnRpY2xlRGVzY3JpcHRpb24iOiLlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqbrpo5jmnaXkupTkuKrlrZfvvIzpgqPpg73kuI3mmK/kuovvvJvlpKnnqboiLCJhcnRpY2xlVGFnbmFtZXMiOiIxMiwzNCw1NiIsImFydGljbGVUeXBlIjoiMSIsImFydGljbGVGcm9tIjoxLCJib251c1N0YXR1cyI6IjEiLCJ0ZXh0bnVtIjoxNTQsInB1Ymxpc2hTdGF0dXMiOjJ9,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==651e0bd95699f41b9878721d9c594547
+2018-05-14 18:09:41,219 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:41,220 [catalina-exec-7] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:41,225 [catalina-exec-7] INFO  com.kg.platform.common.lock.Lock - 获取锁 [kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程 [catalina-exec-7]
+2018-05-14 18:09:41,230 [catalina-exec-7] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 文章保存用户id 438281696383737856,文章Id445648900477558784
+2018-05-14 18:09:41,232 [catalina-exec-7] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 统计表存入文章ID 445648900477558784
+2018-05-14 18:09:41,233 [catalina-exec-7] INFO  com.kg.platform.common.lock.Lock - 解锁[kguser:: ArticlekgService::reward::438281696383737856438281696408903680] 线程[catalina-exec-7]
+2018-05-14 18:09:42,324 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 入参是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:42,325 [catalina-exec-12] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==
+2018-05-14 18:09:42,325 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 执行后是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:42,325 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: cf5c578d-59f8-4677-b127-ca4209f0a090;desc: http request by rest param: {"userId":"438281696383737856"}
+2018-05-14 18:09:42,325 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 入参是：{"userId":"438281696383737856"} 
+2018-05-14 18:09:42,325 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 入参是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:42,325 [catalina-exec-15] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==
+2018-05-14 18:09:42,325 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 执行后是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:42,325 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: c8038a4b-7fa4-4720-881e-151c14af23e4;desc: http request by rest param: {"userId":"438281696383737856"}
+2018-05-14 18:09:42,325 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /disciple/inviteRemind 入参是：{"userId":"438281696383737856"} 
+2018-05-14 18:09:42,325 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:42,325 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/disciple/inviteRemind,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==7c9f70d2fd8a066c63faecb7db416a99
+2018-05-14 18:09:42,325 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:42,325 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/disciple/inviteRemind,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==7c9f70d2fd8a066c63faecb7db416a99
+2018-05-14 18:09:42,326 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/getProfile 入参是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:42,326 [catalina-exec-17] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==
+2018-05-14 18:09:42,326 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/getProfile 执行后是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:42,326 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 67a7ca99-ca2e-4ec9-8d47-f062b8ae862f;desc: http request by rest param: {"userId":"438281696383737856"}
+2018-05-14 18:09:42,326 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/getProfile 入参是：{"userId":"438281696383737856"} 
+2018-05-14 18:09:42,326 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:42,326 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/userprofile/getProfile,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==7c9f70d2fd8a066c63faecb7db416a99
+2018-05-14 18:09:42,331 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/checkProfile/ 入参是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:42,332 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:42,332 [catalina-exec-19] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==
+2018-05-14 18:09:42,332 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:42,332 [catalina-exec-17] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:42,332 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:42,332 [catalina-exec-12] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:42,332 [catalina-exec-15] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:42,332 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/checkProfile/ 执行后是：eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ== 
+2018-05-14 18:09:42,332 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: dc10f821-84e2-4846-afe9-3a32a9124878;desc: http request by rest param: {"userId":"438281696383737856"}
+2018-05-14 18:09:42,332 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /userprofile/checkProfile/ 入参是：{"userId":"438281696383737856"} 
+2018-05-14 18:09:42,333 [catalina-exec-17] INFO  com.kg.platform.service.impl.UserProfileServiceImpl - 获取用户资料入参：UserProfileRequest={"userId":438281696383737856}
+2018-05-14 18:09:42,333 [catalina-exec-17] INFO  com.kg.platform.common.utils.HttpUtil - 获取到的用户ip：172.16.0.217
+2018-05-14 18:09:42,333 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:42,333 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/userprofile/checkProfile/,data==eyJ1c2VySWQiOiI0MzgyODE2OTYzODM3Mzc4NTYifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==7c9f70d2fd8a066c63faecb7db416a99
+2018-05-14 18:09:42,339 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:42,339 [catalina-exec-19] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:42,396 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/getuserArticleAll/ 入参是：eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ== 
+2018-05-14 18:09:42,396 [catalina-exec-20] INFO  com.kg.platform.common.support.ApiRequestSupport - input data:eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ==
+2018-05-14 18:09:42,396 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/getuserArticleAll/ 执行后是：eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ== 
+2018-05-14 18:09:42,396 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - TraceId: 1f7c899e-39ad-4eb4-b7d6-83add9c6d3a9;desc: http request by rest param: {"createUser":"438281696383737856","currentPage":1,"publishStatus":""}
+2018-05-14 18:09:42,396 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.ApiInterceptor - url = /article/getuserArticleAll/ 入参是：{"currentPage":1,"createUser":"438281696383737856","publishStatus":""} 
+2018-05-14 18:09:42,396 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - =getMethod=POST++getContentType++null
+2018-05-14 18:09:42,396 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - url==/article/getuserArticleAll/,data==eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ==,token==438281696383737856_75efc437277647638db1ffa3716b6319,sign==ba1cab9e28c6cf9795a2dbd642701964
+2018-05-14 18:09:42,399 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ==tokenModel{"token":"75efc437277647638db1ffa3716b6319","userId":438281696383737856}
+2018-05-14 18:09:42,399 [catalina-exec-20] INFO  com.kg.platform.common.interceptor.LoginUserInterceptor - ===kguser{"data":{"accountFrom":1,"applyRole":"2","articlesum":0,"auditStatus":1,"bindWeiXin":0,"bindWeibo":0,"bonusStatus":1,"depositStatus":0,"inviteCode":"AS3vOg","inviteStatus":0,"lockStatus":1,"mobIle":"18109072521","realAuthedTag":0,"realnameAuthed":-1,"state":false,"tradepasswordSet":1,"userId":"438281696383737856","userMobile":"181****2521","userRole":2,"vipTag":0},"errorCode":10000,"ok":true}
+2018-05-14 18:09:42,400 [catalina-exec-20] INFO  com.kg.platform.service.impl.ArticlekgServiceImpl - 我的专栏我的文章前端入参：{"createUser":438281696383737856,"currentPage":1,"limit":0,"publishStatus":"","start":0},分页入参：{"currentPage":1,"data":["eyJjdXJyZW50UGFnZSI6MSwiY3JlYXRlVXNlciI6IjQzODI4MTY5NjM4MzczNzg1NiIsInB1Ymxpc2hTdGF0dXMiOiIifQ=="],"pageSize":20,"totalNumber":0,"totalPage":0}
+(1) unicode转换成中文前的returnStr : {"code":0,"data":{"ip":"172.16.0.217","country":"XX","area":"","region":"XX","city":"内网IP","county":"内网IP","isp":"内网IP","country_id":"xx","area_id":"","region_id":"xx","city_id":"local","county_id":"local","isp_id":"local"}}
+(2) unicode转换成中文后的returnStr : {"code":0,"data":{"ip":"172.16.0.217","country":"XX","area":"","region":"XX","city":"内网IP","county":"内网IP","isp":"内网IP","country_id":"xx","area_id":"","region_id":"xx","city_id":"local","county_id":"local","isp_id":"local"}}
+json数据： {"area":"","country":"XX","isp_id":"local","city":"内网IP","ip":"172.16.0.217","isp":"内网IP","county":"内网IP","region_id":"xx","area_id":"","county_id":"local","region":"XX","country_id":"xx","city_id":"local"}
+json数据： {"area":"","area_id":"","city":"内网IP","city_id":"local","country":"XX","country_id":"xx","county":"内网IP","county_id":"local","ip":"172.16.0.217","isp":"内网IP","isp_id":"local","region":"XX","region_id":"xx"}</msg>
+<status status="PASS" endtime="20180514 18:09:56.337" starttime="20180514 18:09:56.325"></status>
+</kw>
+<status status="PASS" endtime="20180514 18:09:56.340" critical="yes" starttime="20180514 18:09:52.061"></status>
+</test>
+<test id="s1-s1-t4" name="testSqlcon">
+<kw name="Connect To Database Using Custom Params" library="DatabaseLibrary">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>host='172.16.0.17',port=3306,user='lzy',passwd='123456',db='kgweb'</arg>
+</arguments>
+<msg timestamp="20180514 18:09:56.362" level="INFO">Executing : Connect To Database Using Custom Params : pymysql.connect(db_api_2.connect(host='172.16.0.17',port=3306,user='lzy',passwd='123456',db='kgweb')) </msg>
+<status status="PASS" endtime="20180514 18:09:56.366" starttime="20180514 18:09:56.342"></status>
+</kw>
+<kw name="Query" library="DatabaseLibrary">
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional</doc>
+<arguments>
+<arg>select * from kg_user WHERE user_mobile = '18109072538'</arg>
+</arguments>
+<assign>
+<var>${usrid}</var>
+</assign>
+<msg timestamp="20180514 18:09:56.367" level="INFO">Executing : Query  |  select * from kg_user WHERE user_mobile = '18109072538' </msg>
+<msg timestamp="20180514 18:09:56.370" level="INFO">${usrid} = ((439076464403554304L, 'jixu ', None, '18109072538', '86', '9a84945f2e49c1fa42f18459f091ea64', 1, 1, 1, 1, 1, None, None, datetime.datetime(2018, 4, 26, 14, 53, 7), '172.16.0.217', 0, 1, 0, 0, 0, 0, 0...</msg>
+<status status="PASS" endtime="20180514 18:09:56.371" starttime="20180514 18:09:56.367"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${usrid[0][0]}</arg>
+</arguments>
+<msg timestamp="20180514 18:09:56.374" level="INFO">439076464403554304</msg>
+<status status="PASS" endtime="20180514 18:09:56.374" starttime="20180514 18:09:56.372"></status>
+</kw>
+<kw name="Disconnect From Database" library="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20180514 18:09:56.375" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" endtime="20180514 18:09:56.376" starttime="20180514 18:09:56.375"></status>
+</kw>
+<status status="PASS" endtime="20180514 18:09:56.377" critical="yes" starttime="20180514 18:09:56.341"></status>
+</test>
+<status status="FAIL" endtime="20180514 18:09:56.378" starttime="20180514 18:08:49.124"></status>
+</suite>
+<status status="FAIL" endtime="20180514 18:09:56.384" starttime="20180514 18:08:48.998"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="3">Critical Tests</stat>
+<stat fail="1" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="UItest" pass="3">UItest</stat>
+<stat fail="1" id="s1-s1" name="Regular Test" pass="3">UItest.Regular Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

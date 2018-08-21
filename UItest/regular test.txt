@@ -7,6 +7,7 @@ Library           DatabaseLibrary
 *** Test Cases ***
 logintest
     loginqk
+    sleep    3
     logoutqk
     [Teardown]    CleanProcess
 
@@ -78,7 +79,6 @@ loginqk
     Clear Element Text    //input[@id='bodyMain']
     Input Password    //input[@id='bodyMain']    123456
     Click Button    //*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button
-    sleep    2
 
 logoutqk
     Maximize Browser Window
@@ -86,8 +86,8 @@ logoutqk
     Click Element    //a[@class="omit1 headerUserName"]
     Wait Until Element Is Visible    //ul[@class="navAccount"]    5s
     Click Element    //ul[@class="navAccount"]/li[7]
-    Wait Until Element Is Visible    //a[contains(text(),"登录")]    15s
-    Wait Until Element Is Visible    //a[contains(text(),"/注册")]    15s
+    Comment    Wait Until Element Is Visible    //a[contains(text(),"登录")]    15s
+    Comment    Wait Until Element Is Visible    //a[contains(text(),"/注册")]    15s
     Page Should Contain Element    //a[contains(text(),"登录")]
     Page Should Contain Element    //a[contains(text(),"/注册")]
     sleep    4

@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180514 21:12:32.563" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\UItest" id="s1" name="UItest">
+<suite source="D:\testQianke\UItest\regular test.txt" id="s1-s1" name="Regular Test">
+<test id="s1-s1-t1" name="publishedWords">
+<kw name="loginqk">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.kg.com/</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20180514 21:12:32.834" level="INFO">Opening browser 'chrome' to base url 'https://www.kg.com/'.</msg>
+<msg timestamp="20180514 21:12:35.990" level="DEBUG">POST http://127.0.0.1:54463/session {"capabilities": {"alwaysMatch": {"browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20180514 21:12:38.016" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:38.017" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/timeouts/async_script {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "ms": 5000.0}</msg>
+<msg timestamp="20180514 21:12:38.020" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:38.022" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/timeouts/implicit_wait {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "ms": 0.0}</msg>
+<msg timestamp="20180514 21:12:38.025" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:38.026" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/url {"url": "https://www.kg.com/", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:42.490" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:42.491" level="DEBUG">Opened browser with session id 9d3a8074b1b282c1f76027bf43b7d93b.</msg>
+<status status="PASS" endtime="20180514 21:12:42.492" starttime="20180514 21:12:32.834"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 21:12:44.494" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 21:12:44.495" starttime="20180514 21:12:42.493"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(text(),"登录")]</arg>
+</arguments>
+<msg timestamp="20180514 21:12:44.497" level="INFO">Clicking element '//a[contains(text(),"登录")]'.</msg>
+<msg timestamp="20180514 21:12:44.498" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//a[contains(text(),\"\u767b\u5f55\")]"}</msg>
+<msg timestamp="20180514 21:12:44.567" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:44.568" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-1/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-1"}</msg>
+<msg timestamp="20180514 21:12:44.784" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:44.785" starttime="20180514 21:12:44.496"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180514 21:12:46.787" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180514 21:12:46.788" starttime="20180514 21:12:44.785"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='loginInput']</arg>
+</arguments>
+<msg timestamp="20180514 21:12:46.791" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//input[@id='loginInput']"}</msg>
+<msg timestamp="20180514 21:12:46.888" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:46.889" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-4/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-4"}</msg>
+<msg timestamp="20180514 21:12:47.044" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:47.044" starttime="20180514 21:12:46.789"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='loginInput']</arg>
+<arg>18109072521</arg>
+</arguments>
+<msg timestamp="20180514 21:12:47.045" level="INFO">Typing text '18109072521' into text field '//input[@id='loginInput']'.</msg>
+<msg timestamp="20180514 21:12:47.046" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//input[@id='loginInput']"}</msg>
+<msg timestamp="20180514 21:12:47.058" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.058" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-4/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-4"}</msg>
+<msg timestamp="20180514 21:12:47.069" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.070" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-4/value {"text": "18109072521", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-4", "value": ["1", "8", "1", "0", "9", "0", "7", "2", "5", "2", "1"]}</msg>
+<msg timestamp="20180514 21:12:47.211" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:47.212" starttime="20180514 21:12:47.045"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='bodyMain']</arg>
+</arguments>
+<msg timestamp="20180514 21:12:47.213" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//input[@id='bodyMain']"}</msg>
+<msg timestamp="20180514 21:12:47.236" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.237" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-5/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-5"}</msg>
+<msg timestamp="20180514 21:12:47.276" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:47.276" starttime="20180514 21:12:47.213"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='bodyMain']</arg>
+<arg>123456</arg>
+</arguments>
+<msg timestamp="20180514 21:12:47.277" level="INFO">Typing password into text field '//input[@id='bodyMain']'.</msg>
+<msg timestamp="20180514 21:12:47.278" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//input[@id='bodyMain']"}</msg>
+<msg timestamp="20180514 21:12:47.291" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.291" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-5/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-5"}</msg>
+<msg timestamp="20180514 21:12:47.302" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.303" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-5/value {"text": "123456", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-5", "value": ["1", "2", "3", "4", "5", "6"]}</msg>
+<msg timestamp="20180514 21:12:47.381" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:47.382" starttime="20180514 21:12:47.277"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button</arg>
+</arguments>
+<msg timestamp="20180514 21:12:47.383" level="INFO">Clicking button '//*[@id="app"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button'.</msg>
+<msg timestamp="20180514 21:12:47.383" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//*[@id=\"app\"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button"}</msg>
+<msg timestamp="20180514 21:12:47.406" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.407" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-6/name {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-6"}</msg>
+<msg timestamp="20180514 21:12:47.411" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.412" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//*[@id=\"app\"]/div[1]/div[3]/div/div/div[2]/div/form/div[4]/div/button"}</msg>
+<msg timestamp="20180514 21:12:47.428" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.428" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-6/name {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-6"}</msg>
+<msg timestamp="20180514 21:12:47.433" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:47.433" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.4867441183878496-6/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.4867441183878496-6"}</msg>
+<msg timestamp="20180514 21:12:47.503" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:47.503" starttime="20180514 21:12:47.382"></status>
+</kw>
+<status status="PASS" endtime="20180514 21:12:47.504" starttime="20180514 21:12:32.833"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20180514 21:12:47.505" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window/current/maximize {"windowHandle": "current", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:48.711" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:48.711" starttime="20180514 21:12:47.504"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180514 21:12:49.712" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180514 21:12:49.712" starttime="20180514 21:12:48.712"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(),"写文章")]</arg>
+</arguments>
+<msg timestamp="20180514 21:12:49.713" level="INFO">Clicking element '//span[contains(text(),"写文章")]'.</msg>
+<msg timestamp="20180514 21:12:49.713" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//span[contains(text(),\"\u5199\u6587\u7ae0\")]"}</msg>
+<msg timestamp="20180514 21:12:49.774" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:49.775" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.16176337339559854-1/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.16176337339559854-1"}</msg>
+<msg timestamp="20180514 21:12:49.872" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:49.872" starttime="20180514 21:12:49.712"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>url=https://www.kg.com/account/details.html#/column</arg>
+</arguments>
+<msg timestamp="20180514 21:12:49.874" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handle {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:49.888" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:49.888" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handle {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:49.890" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:49.890" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handles {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:49.893" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:49.893" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "name": "CDwindow-5D3E5DB61FB2CDF5477C805A6D4610A7"}</msg>
+<msg timestamp="20180514 21:12:49.933" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:49.933" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/execute {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "args": [], "script": "return [ window.id, window.name ];"}</msg>
+<msg timestamp="20180514 21:12:50.008" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:50.008" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handle {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:50.009" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:50.010" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/title {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:50.015" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:50.015" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/url {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:50.021" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:50.021" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "name": "CDwindow-959251E4578719B4B49B1716FC84536A"}</msg>
+<msg timestamp="20180514 21:12:50.072" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:50.073" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/execute {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "args": [], "script": "return [ window.id, window.name ];"}</msg>
+<msg timestamp="20180514 21:12:51.146" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:51.147" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handle {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:51.150" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:51.152" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/title {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:51.164" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:51.165" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/url {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:51.182" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:51.183" starttime="20180514 21:12:49.873"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//span[contains(text(),"发布视频")]</arg>
+<arg>15s</arg>
+</arguments>
+<msg timestamp="20180514 21:12:51.187" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//span[contains(text(),\"\u53d1\u5e03\u89c6\u9891\")]"}</msg>
+<msg timestamp="20180514 21:12:51.227" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:51.228" starttime="20180514 21:12:51.185"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//span[contains(text(),"发表文章")]</arg>
+<arg>15s</arg>
+</arguments>
+<msg timestamp="20180514 21:12:51.231" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//span[contains(text(),\"\u53d1\u8868\u6587\u7ae0\")]"}</msg>
+<msg timestamp="20180514 21:12:51.271" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:51.272" starttime="20180514 21:12:51.229"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(),"发表文章")]</arg>
+</arguments>
+<msg timestamp="20180514 21:12:51.274" level="INFO">Clicking element '//span[contains(text(),"发表文章")]'.</msg>
+<msg timestamp="20180514 21:12:51.275" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//span[contains(text(),\"\u53d1\u8868\u6587\u7ae0\")]"}</msg>
+<msg timestamp="20180514 21:12:51.294" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:51.295" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.6058278075778587-2/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.6058278075778587-2"}</msg>
+<msg timestamp="20180514 21:12:52.149" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:52.149" starttime="20180514 21:12:51.273"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180514 21:12:55.151" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180514 21:12:55.151" starttime="20180514 21:12:52.150"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>url=https://www.kg.com/publish/list.html</arg>
+</arguments>
+<msg timestamp="20180514 21:12:55.152" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handle {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.153" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.153" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handle {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.155" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.155" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handles {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.157" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.157" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "name": "CDwindow-5D3E5DB61FB2CDF5477C805A6D4610A7"}</msg>
+<msg timestamp="20180514 21:12:55.194" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.195" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/execute {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "args": [], "script": "return [ window.id, window.name ];"}</msg>
+<msg timestamp="20180514 21:12:55.229" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.230" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handle {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.230" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.231" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/title {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.240" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.241" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/url {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.245" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.246" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "name": "CDwindow-959251E4578719B4B49B1716FC84536A"}</msg>
+<msg timestamp="20180514 21:12:55.295" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.296" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/execute {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "args": [], "script": "return [ window.id, window.name ];"}</msg>
+<msg timestamp="20180514 21:12:55.324" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.324" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/window_handle {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.326" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.326" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/title {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.332" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.333" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/url {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:12:55.343" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:55.343" starttime="20180514 21:12:55.151"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>dom=document.querySelector('div.el-form-item__content&gt;div&gt;input.el-input__inner')</arg>
+</arguments>
+<status status="PASS" endtime="20180514 21:12:55.344" starttime="20180514 21:12:55.344"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[1]/div/div[1]/input</arg>
+<arg>自动化测试</arg>
+</arguments>
+<msg timestamp="20180514 21:12:55.345" level="INFO">Typing text '自动化测试' into text field 'xpath=/html/body/div/div[2]/div[2]/div/form/div[1]/div/div[1]/input'.</msg>
+<msg timestamp="20180514 21:12:55.346" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[1]/div/div[1]/input"}</msg>
+<msg timestamp="20180514 21:12:55.367" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.367" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-1/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-1"}</msg>
+<msg timestamp="20180514 21:12:55.403" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.403" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-1/value {"text": "\u81ea\u52a8\u5316\u6d4b\u8bd5", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-1", "value": ["\u81ea", "\u52a8", "\u5316", "\u6d4b", "\u8bd5"]}</msg>
+<msg timestamp="20180514 21:12:55.522" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:55.522" starttime="20180514 21:12:55.345"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='toolbar']/../div[2]/div[1]</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 21:12:55.523" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//div[@id='toolbar']/../div[2]/div[1]"}</msg>
+<msg timestamp="20180514 21:12:55.540" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.541" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-2/displayed {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-2"}</msg>
+<msg timestamp="20180514 21:12:55.556" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:55.556" starttime="20180514 21:12:55.522"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@id='toolbar']/../div[2]/div[1]</arg>
+<arg>天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；</arg>
+</arguments>
+<msg timestamp="20180514 21:12:55.558" level="INFO">Typing text '天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；天空飘来五个字，那都不是事；' into text field '//div[@id='toolbar']/../div[2]/div[1]'.</msg>
+<msg timestamp="20180514 21:12:55.558" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//div[@id='toolbar']/../div[2]/div[1]"}</msg>
+<msg timestamp="20180514 21:12:55.569" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.570" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-2/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-2"}</msg>
+<msg timestamp="20180514 21:12:55.629" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:55.630" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-2/value {"text": "\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b\u5929\u7a7a\u98d8\u6765\u4e94\u4e2a\u5b57\uff0c\u90a3\u90fd\u4e0d\u662f\u4e8b\uff1b", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-2", "value": ["\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b", "\u5929", "\u7a7a", "\u98d8", "\u6765", "\u4e94", "\u4e2a", "\u5b57", "\uff0c", "\u90a3", "\u90fd", "\u4e0d", "\u662f", "\u4e8b", "\uff1b"]}</msg>
+<msg timestamp="20180514 21:12:57.185" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:57.185" starttime="20180514 21:12:55.558"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.documentElement.scrollTop=600</arg>
+</arguments>
+<msg timestamp="20180514 21:12:57.188" level="INFO">Executing JavaScript:
+document.documentElement.scrollTop=600</msg>
+<msg timestamp="20180514 21:12:57.188" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/execute {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "args": [], "script": "document.documentElement.scrollTop=600"}</msg>
+<msg timestamp="20180514 21:12:57.193" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:57.193" starttime="20180514 21:12:57.186"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Focus</arg>
+<arg>/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input</arg>
+</arguments>
+<status status="PASS" endtime="20180514 21:12:57.194" starttime="20180514 21:12:57.193"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 21:12:57.195" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input"}</msg>
+<msg timestamp="20180514 21:12:57.212" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:57.213" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-3/displayed {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-3"}</msg>
+<msg timestamp="20180514 21:12:57.229" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:57.230" starttime="20180514 21:12:57.194"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input</arg>
+<arg>12</arg>
+</arguments>
+<msg timestamp="20180514 21:12:57.232" level="INFO">Typing text '12' into text field 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input'.</msg>
+<msg timestamp="20180514 21:12:57.234" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[1]/input"}</msg>
+<msg timestamp="20180514 21:12:57.243" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:57.243" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-3/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-3"}</msg>
+<msg timestamp="20180514 21:12:57.264" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:57.264" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-3/value {"text": "12", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-3", "value": ["1", "2"]}</msg>
+<msg timestamp="20180514 21:12:57.325" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:57.326" starttime="20180514 21:12:57.231"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Focus</arg>
+<arg>/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input</arg>
+</arguments>
+<status status="PASS" endtime="20180514 21:12:57.326" starttime="20180514 21:12:57.326"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input</arg>
+<arg>34</arg>
+</arguments>
+<msg timestamp="20180514 21:12:57.327" level="INFO">Typing text '34' into text field 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input'.</msg>
+<msg timestamp="20180514 21:12:57.327" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[2]/input"}</msg>
+<msg timestamp="20180514 21:12:57.344" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:57.345" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-4/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-4"}</msg>
+<msg timestamp="20180514 21:12:57.378" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:57.378" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-4/value {"text": "34", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-4", "value": ["3", "4"]}</msg>
+<msg timestamp="20180514 21:12:57.446" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:57.446" starttime="20180514 21:12:57.327"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Focus</arg>
+<arg>/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input</arg>
+</arguments>
+<status status="PASS" endtime="20180514 21:12:57.449" starttime="20180514 21:12:57.447"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input</arg>
+<arg>56</arg>
+</arguments>
+<msg timestamp="20180514 21:12:57.450" level="INFO">Typing text '56' into text field 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input'.</msg>
+<msg timestamp="20180514 21:12:57.451" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[1]/div/div[3]/input"}</msg>
+<msg timestamp="20180514 21:12:57.470" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:57.470" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-5/clear {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-5"}</msg>
+<msg timestamp="20180514 21:12:57.500" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:57.501" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-5/value {"text": "56", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-5", "value": ["5", "6"]}</msg>
+<msg timestamp="20180514 21:12:57.562" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:57.562" starttime="20180514 21:12:57.450"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20180514 21:12:58.064" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20180514 21:12:58.065" starttime="20180514 21:12:57.563"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.documentElement.scrollTop=800</arg>
+</arguments>
+<msg timestamp="20180514 21:12:58.067" level="INFO">Executing JavaScript:
+document.documentElement.scrollTop=800</msg>
+<msg timestamp="20180514 21:12:58.068" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/execute {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "args": [], "script": "document.documentElement.scrollTop=800"}</msg>
+<msg timestamp="20180514 21:12:58.086" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:58.088" starttime="20180514 21:12:58.066"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[2]/div/div[2]/div[1]/img</arg>
+</arguments>
+<msg timestamp="20180514 21:12:58.091" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[2]/div/div[2]/div[1]/img'.</msg>
+<msg timestamp="20180514 21:12:58.092" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[2]/div/div[2]/div[1]/img"}</msg>
+<msg timestamp="20180514 21:12:58.146" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:58.148" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-6/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-6"}</msg>
+<msg timestamp="20180514 21:12:58.342" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:58.343" starttime="20180514 21:12:58.089"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 21:12:58.347" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span"}</msg>
+<msg timestamp="20180514 21:12:58.434" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:58.435" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-7/displayed {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-7"}</msg>
+<msg timestamp="20180514 21:12:58.456" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:58.457" starttime="20180514 21:12:58.345"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span</arg>
+</arguments>
+<msg timestamp="20180514 21:12:58.458" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span'.</msg>
+<msg timestamp="20180514 21:12:58.458" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[3]/div/div/label[1]/span[1]/span"}</msg>
+<msg timestamp="20180514 21:12:58.471" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:58.472" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-7/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-7"}</msg>
+<msg timestamp="20180514 21:12:58.555" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:58.555" starttime="20180514 21:12:58.457"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 21:12:58.557" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span"}</msg>
+<msg timestamp="20180514 21:12:58.594" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:58.594" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-8/displayed {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-8"}</msg>
+<msg timestamp="20180514 21:12:58.629" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:58.630" starttime="20180514 21:12:58.556"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span</arg>
+</arguments>
+<msg timestamp="20180514 21:12:58.632" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span'.</msg>
+<msg timestamp="20180514 21:12:58.633" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "/html/body/div/div[2]/div[2]/div/form/div[3]/div[6]/div/div/label[1]/span[1]/span"}</msg>
+<msg timestamp="20180514 21:12:58.645" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:58.646" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-8/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-8"}</msg>
+<msg timestamp="20180514 21:12:58.738" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:12:58.739" starttime="20180514 21:12:58.631"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180514 21:12:59.740" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180514 21:12:59.741" starttime="20180514 21:12:58.740"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class='el-button el-button--primary']/span[contains(text(),"发表文章")]</arg>
+</arguments>
+<msg timestamp="20180514 21:12:59.744" level="INFO">Clicking element '//button[@class='el-button el-button--primary']/span[contains(text(),"发表文章")]'.</msg>
+<msg timestamp="20180514 21:12:59.745" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//button[@class='el-button el-button--primary']/span[contains(text(),\"\u53d1\u8868\u6587\u7ae0\")]"}</msg>
+<msg timestamp="20180514 21:12:59.799" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:12:59.800" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-9/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-9"}</msg>
+<msg timestamp="20180514 21:13:00.018" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:13:00.019" starttime="20180514 21:12:59.742"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Execute Javascript</arg>
+<arg>document.documentElement.scrollTop=10000</arg>
+</arguments>
+<status status="PASS" endtime="20180514 21:13:00.021" starttime="20180514 21:13:00.020"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),"我知道了")]</arg>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180514 21:13:00.023" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//span[contains(text(),\"\u6211\u77e5\u9053\u4e86\")]"}</msg>
+<msg timestamp="20180514 21:13:00.078" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:13:00.078" level="DEBUG">GET http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-10/displayed {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-10"}</msg>
+<msg timestamp="20180514 21:13:00.105" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:13:00.106" starttime="20180514 21:13:00.021"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),"我知道了")]</arg>
+</arguments>
+<msg timestamp="20180514 21:13:00.107" level="INFO">Clicking element 'xpath=//span[contains(text(),"我知道了")]'.</msg>
+<msg timestamp="20180514 21:13:00.107" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/elements {"using": "xpath", "sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "value": "//span[contains(text(),\"\u6211\u77e5\u9053\u4e86\")]"}</msg>
+<msg timestamp="20180514 21:13:00.118" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180514 21:13:00.119" level="DEBUG">POST http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b/element/0.7548668803599423-10/click {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b", "id": "0.7548668803599423-10"}</msg>
+<msg timestamp="20180514 21:13:00.192" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:13:00.192" starttime="20180514 21:13:00.106"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20180514 21:13:05.193" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180514 21:13:05.194" starttime="20180514 21:13:00.193"></status>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20180514 21:13:05.197" level="DEBUG">Closing all browsers.</msg>
+<msg timestamp="20180514 21:13:05.198" level="DEBUG">DELETE http://127.0.0.1:54463/session/9d3a8074b1b282c1f76027bf43b7d93b {"sessionId": "9d3a8074b1b282c1f76027bf43b7d93b"}</msg>
+<msg timestamp="20180514 21:13:05.319" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20180514 21:13:08.338" starttime="20180514 21:13:05.196"></status>
+</kw>
+<kw type="teardown" name="CleanProcess">
+<kw name="Close Process" library="ClosedriverLibrary">
+<arguments>
+<arg>chromedriver</arg>
+</arguments>
+<status status="PASS" endtime="20180514 21:13:08.816" starttime="20180514 21:13:08.342"></status>
+</kw>
+<status status="PASS" endtime="20180514 21:13:08.817" starttime="20180514 21:13:08.340"></status>
+</kw>
+<status status="PASS" endtime="20180514 21:13:08.817" critical="yes" starttime="20180514 21:12:32.832"></status>
+</test>
+<status status="PASS" endtime="20180514 21:13:08.819" starttime="20180514 21:12:32.728"></status>
+</suite>
+<status status="PASS" endtime="20180514 21:13:08.824" starttime="20180514 21:12:32.584"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="UItest" pass="1">UItest</stat>
+<stat fail="0" id="s1-s1" name="Regular Test" pass="1">UItest.Regular Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

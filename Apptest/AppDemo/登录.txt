@@ -1,0 +1,8 @@
+*** Settings ***
+Library           AppiumLibrary
+
+*** Test Cases ***
+打开App
+    Open Application    http://127.0.0.1:4723/wd/hub    platformName=Android    platformVersion=6.0.1    deviceName=F3D7N15A22005398    app=D:\\kg_test_v1.2.0.10.apk    noReset=true
+    ...    appPackage=com.kgtech.kg    automationName=Uiautomator2    newCommandTimeout=0    noSign=True    appActivity=.SplashActivity
+    sleep    5

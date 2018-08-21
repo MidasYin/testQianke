@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180705 15:25:44.888" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\interfaceTest" id="s1" name="interfaceTest">
+<suite source="D:\testQianke\interfaceTest\loginTest.txt" id="s1-s1" name="loginTest">
+<test id="s1-s1-t1" name="Getelement">
+<kw name="checkyuansu" library="common">
+<arguments>
+<arg>${mobile}</arg>
+<arg>${passwd}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api</arg>
+<arg>https://test.kg.com</arg>
+</arguments>
+<msg timestamp="20180705 15:25:45.131" level="INFO">Creating Session using : alias=api, url=https://test.kg.com, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20180705 15:25:45.132" level="DEBUG">Creating session: api</msg>
+<msg timestamp="20180705 15:25:45.132" level="DEBUG">Argument types are:
+&lt;type 'bool'&gt;</msg>
+<status status="PASS" endtime="20180705 15:25:45.132" starttime="20180705 15:25:45.131"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>userMobile=${mobile}</arg>
+<arg>userPassword=${passwd}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.135" level="INFO">${dict} = {u'userMobile': u'18113185587', u'userPassword': u'123456'}</msg>
+<status status="PASS" endtime="20180705 15:25:45.135" starttime="20180705 15:25:45.134"></status>
+</kw>
+<kw name="Base 64 Encode" library="Base64Library">
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<assign>
+<var>${base64}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.137" level="INFO">${base64} = eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ==</msg>
+<status status="PASS" endtime="20180705 15:25:45.137" starttime="20180705 15:25:45.136"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${base64}</arg>
+</arguments>
+<msg timestamp="20180705 15:25:45.137" level="INFO">eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ==</msg>
+<status status="PASS" endtime="20180705 15:25:45.138" starttime="20180705 15:25:45.137"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>data=${base64}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.138" level="INFO">${dict} = {u'data': 'eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ=='}</msg>
+<status status="PASS" endtime="20180705 15:25:45.139" starttime="20180705 15:25:45.138"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>api</arg>
+<arg>/userkg/checkLogin</arg>
+<arg>params=${dict}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.141" level="DEBUG">Starting new HTTPS connection (1): test.kg.com</msg>
+<msg timestamp="20180705 15:25:45.789" level="DEBUG">https://test.kg.com:443 "POST /userkg/checkLogin?data=eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ%3D%3D HTTP/1.1" 200 None</msg>
+<msg timestamp="20180705 15:25:45.790" level="DEBUG">post response: {"responseReq":"","responseTime":"1530775522589","message":"成功","code":"10000","accountStr":"","responseBody":{"errorCode":10000,"errorMsg":null,"data":{"applyRole":null,"inmagelink":"https:/test-kg-oss.oss-cn-beijing.aliyuncs.com/","userId":"438017635100270592","userName":"Terry的专栏","userEmail":null,"userMobile":"18113185587","mobileArea":"86","userPassword":null,"userRole":2,"userLevel":null,"auditStatus":0,"bindStatus":null,"lockStatus":null,"accountFrom":null,"thirdPartyId":null,"createDate":null,"applyColumnTime":null,"registerIp":null,"emailAuthed":null,"mobileAuthed":null,"bindWeibo":null,"bindWeiXin":null,"userOrder":null,"hotUser":null,"token":"438017635100270592_48a284125d5541869f8a6dcd19cd4f95","tokenModel":{"userId":438017635100270592,"token":"48a284125d5541869f8a6dcd19cd4f95"},"state":false,"mobIle":null,"articlesum":70,"realnameAuthed":1,"tradepasswordSet":1,"depositStatus":0,"userStatus":null,"wbName":null,"wxName":null,"lockDate":null,"lockTime":null,"lockUnit":null,"response":null,"refuseReason":null,"certRefuseReason":null,"depositAddress":null,"atskMobile":"181****5587","realName":null,"idcardNo":null,"idcardFront":null,"certificateStatus":"1","depositAmount":null,"remainingAmount":null,"loginBonusStatus":1,"inviteCode":null,"inviteStatus":null,"bonusStatus":null,"bonusFreezeReason":null,"avatar":"17710/461966310088253440.jpg","headImgurl":null,"nickName":null,"openId":null,"newUser":null,"identityTag":"大黄蜂媒体人","realAuthedTag":0,"vipTag":1},"ok":true}}</msg>
+<msg timestamp="20180705 15:25:45.790" level="INFO">Post Request using : alias=api, uri=/userkg/checkLogin, data=&lt;empty&gt;, headers=None, files=None, allow_redirects=True </msg>
+<msg timestamp="20180705 15:25:45.791" level="INFO">D:\Python27\lib\site-packages\urllib3\util\ssl_.py:339: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  SNIMissingWarning
+D:\Python27\lib\site-packages\urllib3\util\ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning
+D:\Python27\lib\site-packages\urllib3\connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20180705 15:25:45.791" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180705 15:25:45.791" starttime="20180705 15:25:45.139"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20180705 15:25:45.792" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180705 15:25:45.793" starttime="20180705 15:25:45.792"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${response.json()}</arg>
+</arguments>
+<assign>
+<var>${txt}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.794" level="INFO">${txt} = {u'code': u'10000', u'responseBody': {u'errorCode': 10000, u'errorMsg': None, u'data': {u'bindStatus': None, u'depositAmount': None, u'inviteCode': None, u'bindWeibo': None, u'certRefuseReason': None,...</msg>
+<status status="PASS" endtime="20180705 15:25:45.794" starttime="20180705 15:25:45.793"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${txt['responseBody']['data']['token']}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.795" level="INFO">${token} = 438017635100270592_48a284125d5541869f8a6dcd19cd4f95</msg>
+<status status="PASS" endtime="20180705 15:25:45.795" starttime="20180705 15:25:45.794"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${txt['responseBody']['data']['userId']}</arg>
+</arguments>
+<assign>
+<var>${userid}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.796" level="INFO">${userid} = 438017635100270592</msg>
+<status status="PASS" endtime="20180705 15:25:45.796" starttime="20180705 15:25:45.796"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>token=${token}</arg>
+<arg>userid=${userid}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.797" level="INFO">${dict} = {u'token': u'438017635100270592_48a284125d5541869f8a6dcd19cd4f95', u'userid': u'438017635100270592'}</msg>
+<status status="PASS" endtime="20180705 15:25:45.798" starttime="20180705 15:25:45.797"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<msg timestamp="20180705 15:25:45.798" level="INFO">{u'token': u'438017635100270592_48a284125d5541869f8a6dcd19cd4f95', u'userid': u'438017635100270592'}</msg>
+<status status="PASS" endtime="20180705 15:25:45.798" starttime="20180705 15:25:45.798"></status>
+</kw>
+<msg timestamp="20180705 15:25:45.799" level="INFO">${dict} = {u'token': u'438017635100270592_48a284125d5541869f8a6dcd19cd4f95', u'userid': u'438017635100270592'}</msg>
+<status status="PASS" endtime="20180705 15:25:45.799" starttime="20180705 15:25:45.130"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<msg timestamp="20180705 15:25:45.800" level="INFO">{u'token': u'438017635100270592_48a284125d5541869f8a6dcd19cd4f95', u'userid': u'438017635100270592'}</msg>
+<status status="PASS" endtime="20180705 15:25:45.800" starttime="20180705 15:25:45.799"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${dict['token']}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.801" level="INFO">${token} = 438017635100270592_48a284125d5541869f8a6dcd19cd4f95</msg>
+<status status="PASS" endtime="20180705 15:25:45.801" starttime="20180705 15:25:45.800"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${dict['userid']}</arg>
+</arguments>
+<assign>
+<var>${userid}</var>
+</assign>
+<msg timestamp="20180705 15:25:45.802" level="INFO">${userid} = 438017635100270592</msg>
+<status status="PASS" endtime="20180705 15:25:45.802" starttime="20180705 15:25:45.802"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${token}</arg>
+</arguments>
+<msg timestamp="20180705 15:25:45.803" level="INFO">${token} = 438017635100270592_48a284125d5541869f8a6dcd19cd4f95</msg>
+<status status="PASS" endtime="20180705 15:25:45.804" starttime="20180705 15:25:45.803"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${userid}</arg>
+</arguments>
+<msg timestamp="20180705 15:25:45.805" level="INFO">${userid} = 438017635100270592</msg>
+<status status="PASS" endtime="20180705 15:25:45.805" starttime="20180705 15:25:45.804"></status>
+</kw>
+<doc>登录返回的useid_token类型，后续用于加密</doc>
+<status status="PASS" endtime="20180705 15:25:45.805" critical="yes" starttime="20180705 15:25:45.129"></status>
+</test>
+<status status="PASS" endtime="20180705 15:25:45.806" starttime="20180705 15:25:44.929"></status>
+</suite>
+<status status="PASS" endtime="20180705 15:25:45.807" starttime="20180705 15:25:44.907"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="interfaceTest" pass="1">interfaceTest</stat>
+<stat fail="0" id="s1-s1" name="loginTest" pass="1">interfaceTest.loginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

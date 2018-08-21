@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180816 20:25:48.506" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\Apptest\AppDemo" id="s1" name="AppDemo">
+<suite source="D:\testQianke\Apptest\AppDemo\登录.txt" id="s1-s1" name="登录">
+<test id="s1-s1-t1" name="打开App">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=6.0.1</arg>
+<arg>deviceName=F3D7N15A22005398</arg>
+<arg>app=D:\\kg_test_v1.2.0.10.apk</arg>
+<arg>noReset=true</arg>
+<arg>appPackage=com.kgtech.kg</arg>
+<arg>newCommandTimeout=0</arg>
+<arg>noSign=True</arg>
+<arg>appActivity=com.kgtech.kg.activity.MainActivity</arg>
+</arguments>
+<msg timestamp="20180816 20:25:48.679" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"appium:appActivity": "com.kgtech.kg.activity.MainActivity", "appium:noReset": "true", "appium:noSign": "True", "appium:newCommandTimeout": "0", "appium:app": "D:\\kg_test_v1.2.0.10.apk", "appium:deviceName": "F3D7N15A22005398", "appium:platformVersion": "6.0.1", "appium:appPackage": "com.kgtech.kg", "platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "F3D7N15A22005398", "app": "D:\\kg_test_v1.2.0.10.apk", "noReset": "true", "noSign": "True", "newCommandTimeout": "0", "platformVersion": "6.0.1", "appPackage": "com.kgtech.kg", "platformName": "Android", "appActivity": "com.kgtech.kg.activity.MainActivity"}}</msg>
+<msg timestamp="20180816 20:25:56.141" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180816 20:25:56.145" level="FAIL">No application is open</msg>
+<msg timestamp="20180816 20:25:56.146" level="DEBUG">Traceback (most recent call last):
+  File "&lt;decorator-gen-32&gt;", line 2, in capture_page_screenshot
+  File "D:\Python27\lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "D:\Python27\lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 31, in capture_page_screenshot
+    if hasattr(self._current_application(), 'get_screenshot_as_file'):
+  File "D:\Python27\lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 285, in _current_application
+    raise RuntimeError('No application is open')</msg>
+<status status="FAIL" endtime="20180816 20:25:56.146" starttime="20180816 20:25:56.142"></status>
+</kw>
+<msg timestamp="20180816 20:25:56.147" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20180816 20:25:56.150" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find aapt Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+</msg>
+<msg timestamp="20180816 20:25:56.150" level="DEBUG">Traceback (most recent call last):
+  File "&lt;decorator-gen-36&gt;", line 2, in open_application
+  File "D:\Python27\lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "D:\Python27\lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 52, in open_application
+    application = webdriver.Remote(str(remote_url), desired_caps)
+  File "D:\Python27\lib\site-packages\appium\webdriver\webdriver.py", line 97, in __init__
+    super(WebDriver, self).__init__(command_executor, desired_capabilities, browser_profile, proxy, keep_alive)
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 154, in __init__
+    self.start_session(desired_capabilities, browser_profile)
+  File "D:\Python27\lib\site-packages\appium\webdriver\webdriver.py", line 136, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, parameters)
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)</msg>
+<status status="FAIL" endtime="20180816 20:25:56.150" starttime="20180816 20:25:48.676"></status>
+</kw>
+<status status="FAIL" endtime="20180816 20:25:56.151" critical="yes" starttime="20180816 20:25:48.675">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find aapt Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+</status>
+</test>
+<status status="FAIL" endtime="20180816 20:25:56.152" starttime="20180816 20:25:48.545"></status>
+</suite>
+<status status="FAIL" endtime="20180816 20:25:56.154" starttime="20180816 20:25:48.522"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="AppDemo" pass="0">AppDemo</stat>
+<stat fail="1" id="s1-s1" name="登录" pass="0">AppDemo.登录</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180816 20:25:56.147" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

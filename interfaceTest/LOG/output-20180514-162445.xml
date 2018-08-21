@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180514 16:24:45.462" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\interfaceTest" id="s1" name="interfaceTest">
+<suite source="D:\testQianke\interfaceTest\loginTest.txt" id="s1-s1" name="loginTest">
+<test id="s1-s1-t1" name="testFor">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>kg1</arg>
+<arg>kg2</arg>
+<arg>kg3</arg>
+</arguments>
+<assign>
+<var>@{list1}</var>
+</assign>
+<msg timestamp="20180514 16:24:45.696" level="INFO">@{list1} = [ kg1 | kg2 | kg3 ]</msg>
+<status status="PASS" endtime="20180514 16:24:45.696" starttime="20180514 16:24:45.695"></status>
+</kw>
+<kw type="for" name="${i} | @{list1} IN [  ]">
+<msg timestamp="20180514 16:24:45.697" level="FAIL">Invalid FOR loop variable '@{list1}'.</msg>
+<status status="FAIL" endtime="20180514 16:24:45.697" starttime="20180514 16:24:45.697"></status>
+</kw>
+<status status="FAIL" endtime="20180514 16:24:45.697" critical="yes" starttime="20180514 16:24:45.694">Invalid FOR loop variable '@{list1}'.</status>
+</test>
+<status status="FAIL" endtime="20180514 16:24:45.698" starttime="20180514 16:24:45.501"></status>
+</suite>
+<status status="FAIL" endtime="20180514 16:24:45.699" starttime="20180514 16:24:45.479"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="interfaceTest" pass="0">interfaceTest</stat>
+<stat fail="1" id="s1-s1" name="loginTest" pass="0">interfaceTest.loginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180705 15:23:44.026" generator="Robot 3.0.3 (Python 2.7.8 on win32)">
+<suite source="D:\testQianke\interfaceTest" id="s1" name="interfaceTest">
+<suite source="D:\testQianke\interfaceTest\loginTest.txt" id="s1-s1" name="loginTest">
+<test id="s1-s1-t1" name="Getelement">
+<kw name="checkyuansu" library="common">
+<arguments>
+<arg>${mobile}</arg>
+<arg>${passwd}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api</arg>
+<arg>https://www.kg.com</arg>
+</arguments>
+<msg timestamp="20180705 15:23:46.865" level="INFO">Creating Session using : alias=api, url=https://www.kg.com, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20180705 15:23:46.866" level="DEBUG">Creating session: api</msg>
+<msg timestamp="20180705 15:23:46.866" level="DEBUG">Argument types are:
+&lt;type 'bool'&gt;</msg>
+<status status="PASS" endtime="20180705 15:23:46.867" starttime="20180705 15:23:46.864"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>userMobile=${mobile}</arg>
+<arg>userPassword=${passwd}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180705 15:23:46.872" level="INFO">${dict} = {u'userMobile': u'18113185587', u'userPassword': u'123456'}</msg>
+<status status="PASS" endtime="20180705 15:23:46.872" starttime="20180705 15:23:46.870"></status>
+</kw>
+<kw name="Base 64 Encode" library="Base64Library">
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<assign>
+<var>${base64}</var>
+</assign>
+<msg timestamp="20180705 15:23:46.874" level="INFO">${base64} = eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ==</msg>
+<status status="PASS" endtime="20180705 15:23:46.875" starttime="20180705 15:23:46.873"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${base64}</arg>
+</arguments>
+<msg timestamp="20180705 15:23:46.876" level="INFO">eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ==</msg>
+<status status="PASS" endtime="20180705 15:23:46.877" starttime="20180705 15:23:46.876"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>data=${base64}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20180705 15:23:46.879" level="INFO">${dict} = {u'data': 'eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ=='}</msg>
+<status status="PASS" endtime="20180705 15:23:46.880" starttime="20180705 15:23:46.878"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>api</arg>
+<arg>/userkg/checkLogin</arg>
+<arg>params=${dict}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20180705 15:23:46.909" level="DEBUG">Starting new HTTPS connection (1): www.kg.com</msg>
+<msg timestamp="20180705 15:23:47.847" level="DEBUG">https://www.kg.com:443 "POST /userkg/checkLogin?data=eyJ1c2VyTW9iaWxlIjogIjE4MTEzMTg1NTg3IiwgInVzZXJQYXNzd29yZCI6ICIxMjM0NTYifQ%3D%3D HTTP/1.1" 200 None</msg>
+<msg timestamp="20180705 15:23:47.849" level="DEBUG">post response: {"responseReq":"","responseTime":"1530775427911","message":"用户名或密码错误，还有4次机会，连续输错超过5次，您的账号将被暂时锁定","code":"20009","accountStr":"","responseBody":null}</msg>
+<msg timestamp="20180705 15:23:47.850" level="INFO">Post Request using : alias=api, uri=/userkg/checkLogin, data=&lt;empty&gt;, headers=None, files=None, allow_redirects=True </msg>
+<msg timestamp="20180705 15:23:47.851" level="INFO">D:\Python27\lib\site-packages\urllib3\util\ssl_.py:339: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  SNIMissingWarning
+D:\Python27\lib\site-packages\urllib3\util\ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning
+D:\Python27\lib\site-packages\urllib3\connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20180705 15:23:47.852" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180705 15:23:47.853" starttime="20180705 15:23:46.880"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20180705 15:23:47.856" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180705 15:23:47.857" starttime="20180705 15:23:47.854"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${response.json()}</arg>
+</arguments>
+<assign>
+<var>${txt}</var>
+</assign>
+<msg timestamp="20180705 15:23:47.864" level="INFO">${txt} = {u'code': u'20009', u'responseBody': None, u'responseTime': u'1530775427911', u'accountStr': u'', u'message': u'\u7528\u6237\u540d\u6216\u5bc6\u7801\u9519\u8bef\uff0c\u8fd8\u67094\u6b21\u673a\u4f1a\uf...</msg>
+<status status="PASS" endtime="20180705 15:23:47.865" starttime="20180705 15:23:47.859"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${txt['responseBody']['data']['token']}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20180705 15:23:47.868" level="FAIL">Resolving variable '${txt['responseBody']['data']['token']}' failed: TypeError: 'NoneType' object has no attribute '__getitem__'</msg>
+<status status="FAIL" endtime="20180705 15:23:47.869" starttime="20180705 15:23:47.866"></status>
+</kw>
+<status status="FAIL" endtime="20180705 15:23:47.870" starttime="20180705 15:23:46.863"></status>
+</kw>
+<doc>登录返回的useid_token类型，后续用于加密</doc>
+<status status="FAIL" endtime="20180705 15:23:47.872" critical="yes" starttime="20180705 15:23:46.860">Resolving variable '${txt['responseBody']['data']['token']}' failed: TypeError: 'NoneType' object has no attribute '__getitem__'</status>
+</test>
+<status status="FAIL" endtime="20180705 15:23:47.875" starttime="20180705 15:23:44.091"></status>
+</suite>
+<status status="FAIL" endtime="20180705 15:23:47.881" starttime="20180705 15:23:44.045"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="interfaceTest" pass="0">interfaceTest</stat>
+<stat fail="1" id="s1-s1" name="loginTest" pass="0">interfaceTest.loginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
